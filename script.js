@@ -1,7 +1,7 @@
 // script.js
 // Uses templates.js for predefined email templates
 // Supports English/Japanese translation
-
+ 
 const TRANSLATE_URL = "https://translate.argosopentech.com/translate";
 
 let templates = [];
@@ -175,3 +175,4 @@ langSelect.addEventListener("change", () => {
 
 // Run
 fetchTemplates();
+
