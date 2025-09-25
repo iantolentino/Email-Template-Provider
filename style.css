@@ -6,7 +6,7 @@
   --shadow: 0 6px 18px rgba(0,0,0,.6);
   --glass: rgba(255,255,255,0.05);
 }
-
+ 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 
@@ -151,3 +151,4 @@ select, input {
   font-weight: bold;
   transition: color 0.3s ease;
 }
+
