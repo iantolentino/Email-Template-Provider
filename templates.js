@@ -1,6 +1,6 @@
 // templates.js
 // Master Email Templates for IT Support + General Company Use
-
+ 
 const customTemplates = [
   // 🔹 Support & Ticketing
   {
@@ -637,3 +637,4 @@ Please ensure all equipment and devices are accounted for.
 Best regards.`
 }
 ];
+
