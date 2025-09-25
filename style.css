@@ -18,7 +18,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+ 
 /* Topbar */
 .topbar {
   height: 64px;
@@ -151,5 +151,6 @@ select, input {
   font-weight: bold;
   transition: color 0.3s ease;
 }
+
 
 
