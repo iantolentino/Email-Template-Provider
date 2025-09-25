@@ -9,7 +9,7 @@
  
 * { box-sizing: border-box; }
 html, body { height: 100%; }
-
+ 
 body {
   margin: 0;
   font-family: Inter, Segoe UI, system-ui, Arial;
@@ -151,4 +151,5 @@ select, input {
   font-weight: bold;
   transition: color 0.3s ease;
 }
+
 
