@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Email Template Maker</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="assets/document.png"> -->
+
 </head>
 <body>
   <header class="topbar">
-    <div class="logo">📧<span class="brand">ET Provider</span></div>
+    <div class="logo">📧 <span class="brand">Email Template Maker</span></div>
   </header>
- 
+
   <main class="wrap">
     <section class="controls-row">
       <div class="left-controls">
@@ -44,8 +46,18 @@
   </main>
 <script src="templates.js"></script>
   <script src="script.js"></script>
+  <script>
+  const favicon = document.createElement("canvas");
+  favicon.width = 64;
+  favicon.height = 64;
+
+  const ctx = favicon.getContext("2d");
+  ctx.font = "48px serif"; // adjust font
+  ctx.fillText("🗐", 24, 48);
+
+  const link = document.createElement("link");
+  link.rel = "icon";
+  link.href = favicon.toDataURL("image/png");
+  document.head.appendChild(link);</script>
 </body>
 </html>
-
-
-
