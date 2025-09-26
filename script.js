@@ -2,7 +2,7 @@
 // Uses templates.js for predefined email templates
 // Supports English/Japanese translation
 // Shows consistent card sizes, modal with full email & navigation, template count
- 
+  
 const TRANSLATE_URL = "https://translate.argosopentech.com/translate";
 
 let templates = [];
@@ -301,4 +301,5 @@ langSelect.addEventListener("change", () => {
 
 // Run
 fetchTemplates();
+
 
