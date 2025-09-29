@@ -10,7 +10,7 @@ const EMAIL_CONSTANTS = {
   DEPARTMENT_SALUTATION: 'Dear [Department] Team,\n\n',
   
   // Basic signatures
-  SHORT_SIGNATURE: '\n\nRegards,\n[Name]',
+  SHORT_SIGNATURE: '\n\nRegards,\n[Name]', 
   POSITION_SIGNATURE: '\n\nRegards,\n[Name]\n[Position]',
   DEPARTMENT_SIGNATURE: '\n\nRegards,\n[Name]\n[Department]',
   FULL_SIGNATURE: '\n\nRegards,\n[Name]\n[Position]\n[Department]\n[Contact Information]'
@@ -3942,5 +3942,6 @@ Best regards.`
 }
 
 ];
+
 
 
