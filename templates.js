@@ -209,26 +209,9 @@ const customTemplates = [
     body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Quality control alert for [Product Line]:
 
 INSPECTION DETAILS:
-• Batch Number: [Batch ID]
-• Production Date: [Date]
-• Line Number: [Line ID]
-• Inspector: [Name]
-
 QUALITY ISSUES:
-• Deviation Type: [Issue Category]
-• Affected Units: [Number/Percentage]
-• Severity Level: [Critical/Major/Minor]
-
 IMMEDIATE ACTIONS:
-1. Production Status: [Halted/Modified]
-2. Quarantined Units: [Number]
-3. Investigation Status: [In Progress]
-
 CORRECTIVE MEASURES:
-• Immediate Fix: [Action Taken]
-• Root Cause Analysis: [Findings]
-• Preventive Steps: [Future Actions]
-
 Please respond with acknowledgment.${EMAIL_CONSTANTS.POSITION_SIGNATURE}
 
 Best regards.`
@@ -254,14 +237,7 @@ MAINTENANCE PERFORMED:
 • Calibration: [Results]
 
 COMPLIANCE STATUS:
-• Safety Checks: [Pass/Fail]
-• Regulatory Standards: [Met/Not Met]
-• Next Inspection Due: [Date]
-
 ACTION REQUIRED:
-• Staff Training: [If Needed]
-• Documentation: [Updates Required]
-• Special Handling: [Instructions]
 
 ${EMAIL_CONSTANTS.POSITION_SIGNATURE}
 
@@ -319,25 +295,12 @@ EXPERIMENT DETAILS:
 • Lab Location: [Room/Building]
 
 METHODOLOGY:
-• Protocol: [Reference]
-• Equipment Used: [List]
-• Controls: [Description]
-• Variables: [List]
-
 RESULTS:
-• Primary Findings: [Data]
-• Statistical Analysis: [Summary]
-• Anomalies: [If Any]
-
+DATA STORAGE:
 CONCLUSIONS:
 • Key Outcomes: [Findings]
 • Implications: [Impact]
 • Next Steps: [Actions]
-
-DATA STORAGE:
-• Location: [Repository]
-• Format: [File Types]
-• Access: [Permissions]
 
 ${EMAIL_CONSTANTS.POSITION_SIGNATURE}
 
@@ -352,31 +315,13 @@ Best regards.`
     body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Update on cross-departmental initiative:
 
 PROJECT OVERVIEW:
-• Name: [Project Title]
-• Objective: [Goal]
-• Timeline: [Duration]
-• Departments: [List]
-
 RESOURCE ALLOCATION:
-Department 1: [Name]
+INTEGRATION POINTS
+TIMELINE::
+Department: [Name]
 • Lead: [Person]
 • Resources: [List]
 • Deliverables: [Items]
-
-Department 2: [Name]
-• Lead: [Person]
-• Resources: [List]
-• Deliverables: [Items]
-
-INTEGRATION POINTS:
-• Workflows: [Processes]
-• Systems: [Tools]
-• Data Sharing: [Methods]
-
-TIMELINE:
-• Phase 1: [Milestone]
-• Phase 2: [Milestone]
-• Phase 3: [Milestone]
 
 Next Meeting: [Date/Time]
 
@@ -391,129 +336,22 @@ Best regards.`
     category: "Hardware Management",
     body: `Dear [Stakeholder],
 
-Please find below the detailed hardware assessment report.
+Device: [Type / Model / S/N]
+Brand: [Manufacturer] Warranty: [Status]
 
-DEVICE IDENTIFICATION:
-Device Type: [Hardware Category]
-Manufacturer: [Brand]
-Model Name/Number: [Model]
-Serial Number: [S/N]
-Asset Tag: [Company Asset ID]
-MAC Address: [If Applicable]
-IP Address: [If Applicable]
-Firmware Version: [Version]
-Purchase Date: [Date]
-Warranty Status: [Details]
+Specs: CPU [Model] | RAM [Size] | Storage [Type] | Power [Condition]
 
-HARDWARE SPECIFICATIONS:
-1. Processing Unit:
-   • CPU Model: [Details]
-   • Clock Speed: [Speed]
-   • Cores/Threads: [Count]
-   • Temperature: [°C]
+Status: [System Performance / Issues Found / Temperature Summary]
 
-2. Memory:
-   • Total RAM: [Capacity]
-   • Type: [DDR4/DDR5]
-   • Speed: [MHz]
-   • Slots Used: [X/Y]
+Recommendations: [Short actions or upgrades]
 
-3. Storage:
-   • Type: [SSD/HDD]
-   • Capacity: [Size]
-   • Health Status: [%]
-   • SMART Status: [Pass/Fail]
+Compliance: [Pass/Fail] Risk: [Level]
 
-4. Power Supply:
-   • Wattage: [W]
-   • Efficiency: [Rating]
-   • Status: [Condition]
+Cost: Parts [Estimate] | Labor [Estimate] | Maintenance [Estimate]
 
-PERFORMANCE METRICS:
-1. System Performance:
-   • Boot Time: [Seconds]
-   • System Score: [Benchmark]
-   • Response Time: [ms]
+Next Steps: [Action 1], [Action 2]
 
-2. Resource Utilization:
-   • CPU Usage: [%]
-   • Memory Usage: [%]
-   • Disk Usage: [%]
-
-3. Temperature Readings:
-   • CPU: [°C]
-   • GPU: [°C]
-   • System: [°C]
-
-DIAGNOSTIC RESULTS:
-1. Hardware Tests:
-   • Memory Test: [Pass/Fail]
-   • Disk Check: [Pass/Fail]
-   • Network Test: [Pass/Fail]
-
-2. Issues Detected:
-   [List of Issues with Severity]
-
-3. Performance Bottlenecks:
-   [Identified Limitations]
-
-RECOMMENDATIONS:
-1. Critical Actions:
-   • [Immediate Actions Required]
-   • Priority: [High/Medium/Low]
-   • Timeline: [Required Completion Date]
-
-2. Maintenance Actions:
-   • [Regular Maintenance Tasks]
-   • Schedule: [Proposed Timeline]
-
-3. Upgrades Recommended:
-   • Component: [Details]
-   • Reason: [Justification]
-   • Cost Estimate: [Amount]
-
-COMPLIANCE & SECURITY:
-• Security Status: [Pass/Fail]
-• Compliance Level: [Standards Met]
-• Risk Assessment: [Risk Level]
-
-COST ANALYSIS:
-1. Immediate Costs:
-   • Required Parts: [List/Cost]
-   • Labor: [Estimate]
-
-2. Projected Costs:
-   • Maintenance: [Annual Estimate]
-   • Upgrades: [Future Requirements]
-
-NEXT STEPS:
-1. [Action Item 1]
-2. [Action Item 2]
-3. [Action Item 3]
-
-APPROVALS REQUIRED:
-• Department Head: [Name]
-• IT Manager: [Name]
-• Finance (if needed): [Name]
-
-Assessment Performed By:
-[Technician Name]
-[Certification/Position]
-[Contact Information]
-
-Date of Assessment: [Date]
-Next Assessment Due: [Date]
-
-Attachments:
-1. Diagnostic Reports
-2. Performance Graphs
-3. Cost Estimates
-4. Vendor Quotations
-
-Best regards,
-[Position]
-[Department]
-[Contact Information]`
+Assessed By: [Name / Position] Date: [Date]`
   },
 
   {
@@ -599,10 +437,7 @@ ACTIONS:
 • [Immediate Steps]
 • [User Instructions]
 
-Contact [Security Team] if needed.
-
-Regards,
-Security Team`
+Regards,`
   },
 
   // 📃 Quick Updates
@@ -688,31 +523,16 @@ Best regards.`
     category: "Facility",
     body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Please address the following maintenance request:
 
-LOCATION DETAILS:
-• Building: [Building Name]
-• Floor: [Floor Number]
-• Room/Area: [Specific Location]
-• Access Requirements: [Special Access Needed]
+Location: [Building], Floor [#], Room [Area]
+Access: [Requirements]
 
-MAINTENANCE TYPE:
-• Category: [HVAC/Electrical/Plumbing/etc.]
-• Priority: [Urgent/Normal/Scheduled]
-• Impact: [Number of People Affected]
+Maintenance: [Category] | Priority: [Urgent/Normal] | Impact: [# Affected]
 
-ISSUE DESCRIPTION:
-• Problem: [Detailed Description]
-• Duration: [How Long Issue Exists]
-• Safety Concern: [Yes/No]
+Issue: [Brief Description] | Duration: [Timeframe] | Safety: [Yes/No]
 
-PREFERRED TIMING:
-• Requested Date: [Date]
-• Business Hours Impact: [Yes/No]
-• Coordination Needed: [Departments]
+Schedule: [Requested Date] | During Business Hours: [Yes/No] | Coordination: [Departments]
 
-Contact Person:
-[Name]
-[Department]
-[Phone/Extension]
+Contact: [Name, Dept, Phone/Ext]
 
 Regards,`
   },
@@ -1024,36 +844,20 @@ Best regards.`
     category: "Vendor Management",
     body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Here's the evaluation report for [Vendor Name]:
 
-VENDOR DETAILS:
-• Company: [Name]
-• Service: [Type]
-• Contract Value: [Amount]
-• Relationship Duration: [Time]
+Vendor: [Company] | Service: [Type] | Contract: [Value] | Duration: [Time]
 
-PERFORMANCE METRICS:
-1. Service Quality
-   • Reliability: [Score/5]
-   • Response Time: [Score/5]
-   • Issue Resolution: [Score/5]
+Performance:
 
-2. Business Terms
-   • Cost Efficiency: [Score/5]
-   • Payment Terms: [Score/5]
-   • Contract Flexibility: [Score/5]
+Quality: Rel [ /5], Resp Time [ /5], Resolution [ /5]
 
-3. Communication
-   • Responsiveness: [Score/5]
-   • Reporting: [Score/5]
-   • Account Management: [Score/5]
+Terms: Cost [ /5], Payment [ /5], Flexibility [ /5]
 
-COMPLIANCE & RISK:
-• Security Standards: [Met/Not Met]
-• Insurance Coverage: [Status]
-• Regulatory Compliance: [Status]
+Communication: Response [ /5], Reporting [ /5], Account Mgmt [ /5]
 
-RECOMMENDATION:
-• Continue/Modify/Terminate
-• Action Items: [List]
+Compliance: Security [Status] | Insurance [Status] | Regulatory [Status]
+
+Recommendation: [Continue / Modify / Terminate]
+Action Items: [List]
 • Timeline: [Dates]${EMAIL_CONSTANTS.POSITION_SIGNATURE}
 
 Best regards.`
@@ -1163,7 +967,7 @@ Best regards.`
     subject: "Privacy Impact Assessment - [Project Name]",
     category: "Data Privacy",
     body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Results of the Privacy Impact Assessment for [Project]:
-
+/* dito */
 PROJECT OVERVIEW:
 • Name: [Project Title]
 • Scope: [Description]
@@ -3942,6 +3746,7 @@ Best regards.`
 }
 
 ];
+
 
 
 
