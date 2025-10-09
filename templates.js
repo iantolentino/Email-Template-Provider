@@ -967,7 +967,7 @@ Best regards.`
     subject: "Privacy Impact Assessment - [Project Name]",
     category: "Data Privacy",
     body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Results of the Privacy Impact Assessment for [Project]:
-/* dito */
+
 PROJECT OVERVIEW:
 • Name: [Project Title]
 • Scope: [Description]
@@ -985,15 +985,7 @@ RISK ASSESSMENT:
    • Access: [Restrictions]
    • Retention: [Period]
 
-3. Data Sharing
-   • Recipients: [List]
-   • Safeguards: [Measures]
-   • Agreements: [Status]
-
 RECOMMENDATIONS:
-1. [Key Finding 1]
-2. [Key Finding 2]
-3. [Key Finding 3]
 
 Required Actions: [List]${EMAIL_CONSTANTS.FULL_SIGNATURE}
 
@@ -1018,19 +1010,10 @@ KEY METRICS:
 
 ASSESSMENT AREAS:
 1. Policy Compliance
-   • Documentation: [Status]
-   • Training: [Completion %]
-   • Reviews: [Frequency]
 
 2. Technical Controls
-   • Encryption: [Status]
-   • Access Control: [Effectiveness]
-   • Monitoring: [Coverage]
 
 3. Third-Party Risk
-   • Vendor Reviews: [Status]
-   • Contract Updates: [Needed]
-   • Due Diligence: [Completed]
 
 ACTIONS REQUIRED:
 1. [Priority Action 1]
@@ -1046,44 +1029,21 @@ Best regards.`
     category: "Change Management",
     body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Please review the following change request:
 
-CHANGE DETAILS:
-• Type: [System/Process/Policy]
-• Priority: [High/Medium/Low]
-• Impact Level: [Critical/Major/Minor]
-• Requested By: [Name]
+Change: [Type] | Priority: [High/Med/Low] | Impact: [Critical/Major/Minor] | Requested By: [Name]
 
-SCOPE:
-• Systems Affected: [List]
-• Users Impacted: [Number/Groups]
-• Departments: [List]
-• Dependencies: [Related Systems]
+Scope: Systems [List] | Users [# / Groups] | Depts [List] | Dependencies [List]
 
-TIMELINE:
-• Requested Start: [Date/Time]
-• Duration: [Length]
-• Completion: [Target Date]
-• Rollback Window: [Duration]
+Timeline: Start [Date/Time] | Duration [Time] | Complete [Date] | Rollback [Window]
 
-IMPLEMENTATION PLAN:
-1. Pre-Change Tasks:
-   • [Preparation Steps]
-   • [Backup Procedures]
-   • [Testing Requirements]
+Plan:
 
-2. Change Process:
-   • [Step-by-Step Plan]
-   • [Verification Points]
-   • [Success Criteria]
+Pre: [Prep / Backup / Test]
 
-3. Post-Change:
-   • [Validation Steps]
-   • [Monitoring Period]
-   • [Sign-off Process]
+During: [Steps / Verification / Criteria]
 
-RISK ASSESSMENT:
-• Potential Issues: [List]
-• Mitigation Plans: [Strategies]
-• Rollback Plan: [Steps]
+Post: [Validation / Monitor / Sign-off]
+
+Risk: Issues [List] | Mitigation [Steps] | Rollback [Plan]
 
 Please review and approve by [Date].${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
   },
@@ -1094,36 +1054,17 @@ Please review and approve by [Date].${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
     category: "Change Management",
     body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Important system update scheduled for [System Name]:
 
-UPDATE DETAILS:
-• System: [Name/Version]
-• Type: [Security/Feature/Maintenance]
-• Priority: [Level]
-• Duration: [Expected Time]
+Update: [System / Version] | Type: [Security / Feature / Maintenance] | Priority: [Level] | Duration: [Time]
 
-SCHEDULE:
-• Start: [Date/Time]
-• End: [Date/Time]
-• Timezone: [Zone]
+Schedule: [Start – End, Timezone]
 
-USER IMPACT:
-• Service Interruption: [Yes/No]
-• Downtime: [Duration]
-• Affected Features: [List]
+Impact: Interruption [Y/N] | Downtime [Duration] | Affected [Features]
 
-PREPARATION REQUIRED:
-• Save Work: [Deadline]
-• Backup Data: [Instructions]
-• Close Applications: [List]
+Preparation: Save work [By ___] | Backup [Y/N] | Close [Apps]
 
-POST-UPDATE:
-• Browser Cache Clear: [Required/Optional]
-• Application Restart: [Yes/No]
-• New Features: [Summary]
+Post-Update: Clear cache [Y/N] | Restart [Y/N] | New Features: [Summary]
 
-SUPPORT:
-• Before Update: [Contact]
-• During Update: [Emergency Contact]
-• After Update: [Help Desk]
+Support: Pre [Contact] | During [Emergency Contact] | Post [Help Desk]
 
 Status updates will be posted at [URL].${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}`
   },
@@ -1133,45 +1074,22 @@ Status updates will be posted at [URL].${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}`
     subject: "Data Migration Plan - [Project Name]",
     category: "Change Management",
     body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Details for the upcoming data migration:
+    
+Project: Source [System/Ver] → Target [System/Ver] | Data: [Volume] | Complexity: [Level]
 
-PROJECT OVERVIEW:
-• Source System: [Name/Version]
-• Target System: [Name/Version]
-• Data Volume: [Size]
-• Complexity: [Level]
+Timeline: Plan [Dates] | Test [Dates] | Migrate [Window] | Validate [Duration]
 
-TIMELINE:
-• Planning Phase: [Dates]
-• Testing Phase: [Dates]
-• Migration Window: [Dates]
-• Validation Period: [Duration]
+Scope: Types [Data] | Records [Count] | Period [Range] | Special [Cases]
 
-DATA SCOPE:
-• Data Types: [Categories]
-• Record Count: [Numbers]
-• Time Range: [Period]
-• Special Cases: [List]
+Strategy:
 
-MIGRATION STRATEGY:
-1. Pre-Migration:
-   • Data Cleanup: [Tasks]
-   • Validation Rules: [Criteria]
-   • Backup Strategy: [Method]
+Pre: Cleanup [Tasks] | Validate [Rules] | Backup [Method]
 
-2. During Migration:
-   • Processing Order: [Sequence]
-   • Checkpoints: [Intervals]
-   • Monitoring: [Tools]
+During: Order [Seq] | Checkpoints [Intervals] | Monitor [Tools]
 
-3. Post-Migration:
-   • Verification: [Process]
-   • Sign-off: [Requirements]
-   • Support Plan: [Details]
+Post: Verify [Process] | Sign-off [Reqs] | Support [Plan]
 
-CONTINGENCY PLAN:
-• Rollback Triggers: [Conditions]
-• Recovery Time: [Estimate]
-• Alternative Paths: [Options]
+Contingency: Rollback [Triggers] | Recovery [Time] | Alt [Options]
 
 Team assignments and detailed procedures attached.${EMAIL_CONSTANTS.FULL_SIGNATURE}`
   },
@@ -1182,43 +1100,21 @@ Team assignments and detailed procedures attached.${EMAIL_CONSTANTS.FULL_SIGNATU
     category: "Event Management",
     body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Details for the upcoming [Event Name] conference:
 
-EVENT OVERVIEW:
-• Date: [Date Range]
-• Location: [Venue]
-• Expected Attendance: [Number]
-• Theme: [Description]
+Event: [Theme] | Date: [Range] | Location: [Venue] | Attendance: [#]
 
-SCHEDULE HIGHLIGHTS:
-Day 1 - [Date]
-• [Time]: [Session]
-• [Time]: [Session]
-• [Time]: [Session]
+Schedule:
 
-Day 2 - [Date]
-• [Time]: [Session]
-• [Time]: [Session]
-• [Time]: [Session]
+Day 1: [Key Sessions / Times]
 
-LOGISTICS:
-• Registration Desk: [Location/Hours]
-• Main Hall: [Location/Capacity]
-• Breakout Rooms: [List/Capacity]
-• Technical Setup: [Requirements]
+Day 2: [Key Sessions / Times]
 
-SPEAKER INFORMATION:
-• Keynote: [Name/Topic]
-• Featured Speakers: [List]
-• Session Moderators: [List]
+Logistics: Reg Desk [Loc/Hrs] | Main Hall [Cap] | Rooms [List] | Tech [Reqs]
 
-CATERING:
-• Breakfast: [Menu/Time]
-• Lunch: [Menu/Time]
-• Refreshments: [Schedule]
+Speakers: Keynote [Name/Topic] | Featured [List] | Moderators [List]
 
-TECHNICAL REQUIREMENTS:
-• AV Equipment: [List]
-• Internet: [Setup]
-• Recording: [Requirements]
+Catering: Breakfast [Time/Menu] | Lunch [Time/Menu] | Refreshments [Time]
+
+Tech Setup: AV [List] | Internet [Setup] | Recording [Reqs]
 
 Action items and responsibilities attached.${EMAIL_CONSTANTS.FULL_SIGNATURE}`
   },
@@ -3746,6 +3642,7 @@ Best regards.`
 }
 
 ];
+
 
 
 
