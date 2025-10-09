@@ -202,301 +202,182 @@ Category Structure:
 
 const customTemplates = [
   // 🏭 Manufacturing Templates
-  {
-    id: "mfg-qc-001",
-    subject: "Quality Control Alert - [Product Line]",
-    category: "Manufacturing",
-    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Quality control alert for [Product Line]:
+{
+  id: "mfg-qc-001",
+  subject: "Quality Control Alert – [Product Line]",
+  category: "Manufacturing",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Please be advised of a quality control issue identified in [Product Line].
 
-INSPECTION DETAILS:
-QUALITY ISSUES:
-IMMEDIATE ACTIONS:
-CORRECTIVE MEASURES:
-Please respond with acknowledgment.${EMAIL_CONSTANTS.POSITION_SIGNATURE}
+Inspection Summary:
+• Issue(s) Detected:
+• Immediate Action Required:
+• Corrective Measures Planned:
+
+Kindly acknowledge receipt and confirm action.${EMAIL_CONSTANTS.POSITION_SIGNATURE}
 
 Best regards.`
-  },
+},
 
-  // 🏥 Healthcare Templates
-  {
-    id: "health-equip-001",
-    subject: "Medical Equipment Maintenance Report",
-    category: "Healthcare",
-    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Equipment maintenance report:
+ {
+  id: "health-equip-001",
+  subject: "Medical Equipment Maintenance Report",
+  category: "Healthcare",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Maintenance update for the following equipment:
 
-EQUIPMENT DETAILS:
-• Device Name: [Equipment Name]
-• Serial Number: [S/N]
-• Department: [Location]
-• Certification: [Standard/Regulation]
+Device: [Name] | S/N: [Number] | Dept: [Location] | Certification: [Standard]
 
-MAINTENANCE PERFORMED:
+Service Performed:
 • Type: [Routine/Emergency]
-• Procedures: [List of Tasks]
-• Parts Replaced: [Components]
-• Calibration: [Results]
+• Tasks: [Summary]
+• Parts Replaced: [If any]
+• Calibration Result: [Status]
 
-COMPLIANCE STATUS:
-ACTION REQUIRED:
-
-${EMAIL_CONSTANTS.POSITION_SIGNATURE}
-
-Best regards.`
-  },
-
-  // 🏦 Financial Services Templates
-  {
-    id: "fin-compliance-001",
-    subject: "Regulatory Compliance Report - [Quarter]",
-    category: "Financial",
-    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Quarterly compliance status report:
-
-REVIEW PERIOD:
-• Quarter: [Q1/Q2/Q3/Q4]
-• Year: [YYYY]
-• Division: [Department]
-
-COMPLIANCE METRICS:
-• Audits Completed: [Number]
-• Issues Identified: [Count]
-• Resolution Rate: [Percentage]
-
-KEY FINDINGS:
-1. [Major Finding 1]
-2. [Major Finding 2]
-3. [Major Finding 3]
-
-RISK ASSESSMENT:
-• High Risk Areas: [List]
-• Mitigation Plans: [Actions]
-• Monitoring Status: [Updates]
-
-RECOMMENDATIONS:
-• Policy Updates: [Changes]
-• Training Needs: [Requirements]
-• System Updates: [Modifications]
+Compliance Status:
+Required Action: [If any]
 
 ${EMAIL_CONSTANTS.POSITION_SIGNATURE}
-
 Best regards.`
-  },
+},
 
-  // 🔬 Research & Laboratory Templates
-  {
-    id: "lab-experiment-001",
-    subject: "Laboratory Experiment Report - [Project ID]",
-    category: "Research",
-    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Experiment results summary:
+ {
+  id: "fin-compliance-001",
+  subject: "Regulatory Compliance Report - [Quarter]",
+  category: "Financial",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Compliance update for [Quarter], [Year]:
 
-EXPERIMENT DETAILS:
-• Project ID: [Number]
-• Date: [Date]
-• Researcher: [Name]
-• Lab Location: [Room/Building]
+Overview:
+• Audits: [#]
+• Issues: [#]
+• Resolution Rate: [%]
 
-METHODOLOGY:
-RESULTS:
-DATA STORAGE:
-CONCLUSIONS:
-• Key Outcomes: [Findings]
-• Implications: [Impact]
-• Next Steps: [Actions]
+Key Findings:
+1. [Finding 1]
+2. [Finding 2]
+
+Risk & Mitigation:
+• High-Risk Areas: [List]
+• Actions: [Plan]
+
+Recommendations:
+• Policy/Training/System updates as needed.
 
 ${EMAIL_CONSTANTS.POSITION_SIGNATURE}
-
 Best regards.`
-  },
+},
 
-  // 🤼 Cross-Departmental Templates
-  {
-    id: "cross-proj-001",
-    subject: "Cross-Department Project Initiative - [Project Name]",
-    category: "Cross-Departmental",
-    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Update on cross-departmental initiative:
+{
+  id: "lab-experiment-001",
+  subject: "Experiment Report - [Project ID]",
+  category: "Research",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Summary of experiment results:
 
-PROJECT OVERVIEW:
-RESOURCE ALLOCATION:
-INTEGRATION POINTS
-TIMELINE::
-Department: [Name]
-• Lead: [Person]
-• Resources: [List]
-• Deliverables: [Items]
+Project: [ID] | Date: [Date] | Researcher: [Name] | Lab: [Location]
+
+Method:
+Results:
+Data Stored At:
+Conclusion:
+• Key Outcomes: [Summary]
+• Next Steps: [Action]
+
+${EMAIL_CONSTANTS.POSITION_SIGNATURE}
+Best regards.`
+},
+
+ {
+  id: "cross-proj-001",
+  subject: "Cross-Department Project - [Project Name]",
+  category: "Cross-Departmental",
+  body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Update on interdepartmental project:
+
+Overview:
+Resources & Integration Points:
+Timeline:
+Department Lead: [Name]
 
 Next Meeting: [Date/Time]
 
 ${EMAIL_CONSTANTS.POSITION_SIGNATURE}
-
 Best regards.`
-  },
-  // � Hardware Management
-  {
-    id: "hw-assessment-001",
-    subject: "Comprehensive Hardware Assessment Report - [Device Type]",
-    category: "Hardware Management",
-    body: `Dear [Stakeholder],
+},
 
-Device: [Type / Model / S/N]
-Brand: [Manufacturer] Warranty: [Status]
+ {
+  id: "hw-assessment-001",
+  subject: "Hardware Assessment Report - [Device Type]",
+  category: "Hardware Management",
+  body: `Dear [Stakeholder],
 
-Specs: CPU [Model] | RAM [Size] | Storage [Type] | Power [Condition]
+Device: [Type/Model/SN] | Brand: [Manufacturer] | Warranty: [Status]
 
-Status: [System Performance / Issues Found / Temperature Summary]
+Specs: CPU [ ] | RAM [ ] | Storage [ ] | Power [ ]
 
-Recommendations: [Short actions or upgrades]
+Status: [Summary]
 
-Compliance: [Pass/Fail] Risk: [Level]
+Recommendations: [ ]
 
-Cost: Parts [Estimate] | Labor [Estimate] | Maintenance [Estimate]
+Compliance/Risk: [ ]
 
-Next Steps: [Action 1], [Action 2]
+Cost: Parts [ ] | Labor [ ] | Maintenance [ ]
 
-Assessed By: [Name / Position] Date: [Date]`
-  },
+Next Steps: [ ]
 
-  {
-    id: "hw-assessment-short-001",
-    subject: "Quick Hardware Assessment - [Device Type]",
-    category: "Hardware Management",
-    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Brief assessment summary for [Device Type]:
+Assessed By: [Name] | Date: [Date]`
+},
 
-DEVICE INFO:
-• Model: [Model Number]
-• Serial: [S/N]
-• Asset Tag: [ID]
+ {
+  id: "hw-assessment-short-001",
+  subject: "Quick Hardware Assessment - [Device Type]",
+  category: "Hardware Management",
+  body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Hardware status for [Device]:
 
-KEY FINDINGS:
-• Performance: [Status]
-• Issues Found: [Brief List]
-• Priority Level: [High/Medium/Low]
+Model: [ ] | Serial: [ ] | Asset: [ ]
 
-ACTION NEEDED:
-• [Key Action Items]
-• Timeline: [Date]
+Findings: [ ]
+Priority: [ ]
 
-Cost Estimate: [Amount]${EMAIL_CONSTANTS.SHORT_SIGNATURE}
+Actions Required: [ ]
+Timeline: [ ]
 
+${EMAIL_CONSTANTS.SHORT_SIGNATURE}
 Best regards.`
-  },
+},
 
-  {
-    id: "hw-repair-short-001",
-    subject: "Quick Repair Report - [Device Type]",
-    category: "Hardware Management",
-    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Repair completed for [Device Type].
+ {
+  id: "hw-repair-short-001",
+  subject: "Repair Report - [Device Type]",
+  category: "Hardware Management",
+  body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Repair completed for [Device]:
 
-DEVICE:
-• Asset ID: [Number]
-• Location: [Place]
+Asset: [ ] | Location: [ ]
 
-WORK DONE:
-• Issue: [Problem]
-• Solution: [Fix Applied]
-• Parts Used: [If Any]
+Issue: [ ]
+Fix Applied: [ ]
+Parts Used: [ ]
 
-Status: [Working/Pending]
-Next Steps: [If Any]${EMAIL_CONSTANTS.SHORT_SIGNATURE}
+Status: [ ]
+Next Steps: [ ]
 
+${EMAIL_CONSTANTS.SHORT_SIGNATURE}
 Best regards.`
-  },
+},
 
-  // 💻 Quick Software Reports
-  {
-    id: "sw-install-short-001",
-    subject: "Software Installation Brief",
-    category: "Software",
-    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Software installation completed.
+ {
+  id: "sw-install-short-001",
+  subject: "Software Installation Brief",
+  category: "Software",
+  body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Software installed successfully:
 
-DETAILS:
-• Software: [Name]
-• Version: [Number]
-• License: [Type]
+Software: [Name] | Version: [ ] | License: [ ]
 
 Status: [Success/Issues]
-Notes: [Any Special Instructions]${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}
+Notes: [Instructions]
 
+${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}
 Best regards.`
-  },
+},
 
-  // 🔒 Security Briefs
-  {
-    id: "sec-incident-short-001",
-    subject: "Security Incident Brief - [Type]",
-    category: "Security",
-    body: `SECURITY ALERT
 
-Incident Type: [Description]
-Time Detected: [Time]
-Status: [Active/Resolved]
-
-IMPACT:
-• Systems: [Affected Systems]
-• Users: [Number/Groups]
-
-ACTIONS:
-• [Immediate Steps]
-• [User Instructions]
-
-Regards,`
-  },
-
-  // 📃 Quick Updates
-  {
-    id: "status-update-short-001",
-    subject: "Quick Status - [Project/Task]",
-    category: "Updates",
-    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Quick update on [Project/Task]:
-
-STATUS: [On Track/Delayed/Complete]
-
-KEY POINTS:
-• [Achievement/Progress]
-• [Current Focus]
-• [Next Steps]
-
-Needs Attention:
-[If Any]${EMAIL_CONSTANTS.SHORT_SIGNATURE}
-
-Best regards.`
-  },
-
-  // 💰 Quick Budget
-  {
-    id: "budget-short-001",
-    subject: "Quick Budget Request - [Item]",
-    category: "Finance",
-    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Requesting budget approval:
-
-ITEM: [Description]
-COST: [Amount]
-NEED BY: [Date]
-
-JUSTIFICATION:
-[Brief Reason]
-
-Cost Center: [Code]${EMAIL_CONSTANTS.SHORT_SIGNATURE}
-
-Best regards.`
-  },
-
-  // 📅 Brief Meeting Notes
-  {
-    id: "meeting-short-001",
-    subject: "Meeting Brief - [Topic]",
-    category: "Meetings",
-    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Meeting summary for [Topic]:
-
-KEY POINTS:
-• [Point 1]
-• [Point 2]
-
-ACTION ITEMS:
-• [Task 1] - [Owner]
-• [Task 2] - [Owner]
-
-Next Meeting: [Date/Time]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
-  },
-
+-------------------------------------------------------------------------------------------------------------------------------------123
   // 🎓 Quick Training
   {
     id: "training-short-001",
@@ -3626,6 +3507,7 @@ Best regards.`
 }
 
 ];
+
 
 
 
