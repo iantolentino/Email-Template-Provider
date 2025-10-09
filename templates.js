@@ -2590,45 +2590,29 @@ Attachments:
     id: "hw-001",
     subject: "Battery Health Assessment Report - [Device ID]",
     category: "IT",
-    body: `Dear [Stakeholder Name],
+    body: `Sir / Madam,
 
-This report details the battery health assessment conducted on [Date].
+Good day!
 
-DEVICE INFORMATION:
-User: [Employee Name]
-Department: [Department]
-Device ID: [PC1234]
-Model: [Device Model]
+Please see below for the Internal Battery status of [User Name]
 
-BATTERY SPECIFICATIONS:
-Type: [Internal/External]
-Serial Number: [SN1234]
-Product Number: [PN1234]
-FRU Part#: [FRU1234]
-Original Capacity: [X] mAh
+PC Name:  PC1234456
+Model:  Lenovo
 
-DIAGNOSTIC RESULTS:
-• Current Capacity: [X] mAh
-• Health Percentage: [X]%
-• Charge Cycles: [X]
-• Wear Level: [Normal/High]
+Internal Battery Details:
+Serial Number:  1000000000
+Product Number: 1000000000
+FRU Part#: 1000000
 
-ANALYSIS:
-The battery is operating at [X]% of its original capacity, [above/below] the recommended 70% threshold.
+Findings:
+The built-in battery charge hold level is 123% which is below/near 30% required capacity of our laptop battery.
+Please see image below for your reference.
 
-RECOMMENDATIONS:
-1. [Immediate/Scheduled] replacement required
-2. Estimated replacement cost: [Amount]
-3. Procurement reference: [REQ-XXX]
+[Insert Image]
 
-NEXT STEPS:
-1. [Action Item 1]
-2. [Action Item 2]
-3. Schedule: [Timeline]
+Recommendation: For replacement, please coordinate with the procurement.
 
-For procurement processing, please reference this report number: [Report-ID]
-
-Best regards.
+Thank you and best regards.
 ${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}
 [Company Name]`
   },
@@ -3642,6 +3626,7 @@ Best regards.`
 }
 
 ];
+
 
 
 
