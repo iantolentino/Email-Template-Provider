@@ -376,8 +376,6 @@ ${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}
 Best regards.`
 },
 
-
--------------------------------------------------------------------------------------------------------------------------------------123
   // 🎓 Quick Training
   {
     id: "training-short-001",
@@ -3504,10 +3502,206 @@ The preventive maintenance for [System/Equipment] has been successfully complete
 All systems are now operational.
 
 Best regards.`
+},
+
+// Security: Password Expiry Warning
+{
+  id: "sec-pw-expiry-001",
+  subject: "Password Expiry Reminder – Action Required",
+  category: "Security",
+  body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}This is a reminder that your account password will expire in [X] days on [Expiry Date]. Please update your password to avoid account lockout.
+
+STEPS TO UPDATE:
+1. Go to: [Password Reset URL]
+2. Follow the on-screen prompts
+3. Confirm password change via email
+
+If you need assistance, contact IT Support.${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+},
+
+// Security: Two-Factor Enrollment
+{
+  id: "sec-2fa-enroll-001",
+  subject: "Action Required: Two-Factor Authentication (2FA) Enrollment",
+  category: "Security",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}To improve account security, Two-Factor Authentication (2FA) will be enabled for [User Group] on [Enable Date].
+
+ENROLLMENT STEPS:
+• Device: [Phone/Authenticator App]
+• Install: [Auth App Link] (if needed)
+• Setup guide: [Link to KB]
+
+Support: If you cannot enroll by the date above, please contact IT to request an exemption or assistance.${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+},
+
+// IAM: Privileged Access Approval
+{
+  id: "iam-priv-approval-001",
+  subject: "Privileged Access Request – Approval Needed",
+  category: "IAM",
+  body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}A request for privileged access has been submitted:
+
+REQUEST SUMMARY:
+• Requestor: [Name]
+• System/Resource: [Resource]
+• Level: [Admin/Root/Superuser]
+• Duration: [Temporary/Permanent]
+• Justification: [Business Reason]
+
+Approvers: please review and respond by [Date]. If approved, next steps and audit logging will be applied.${EMAIL_CONSTANTS.FULL_SIGNATURE}`
+},
+
+// Incident: Root Cause Analysis (RCA) Summary
+{
+  id: "incident-rca-001",
+  subject: "Incident #[ID] — Root Cause Analysis Summary",
+  category: "Incident Management",
+  body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Attached is the RCA for Incident #[ID] that occurred on [Date/Time].
+
+SUMMARY:
+• Incident: [Short Description]
+• Root Cause: [Finding]
+• Timeline: [Key Events]
+• Resolution: [What was done]
+
+ACTIONS & PREVENTION:
+1. Immediate Fix: [Action]
+2. Short-term Mitigation: [Action]
+3. Long-term Prevention: [Action]
+
+Please review and provide any additional input.${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+},
+
+// Change Management: Change Rollback Notification
+{
+  id: "change-rollback-001",
+  subject: "Change Rollback Notice – [Change ID] Executed",
+  category: "Change Management",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}The planned change [Change ID] initiated on [Date/Time] has been rolled back due to [Reason].
+
+DETAILS:
+• Change: [Description]
+• Rollback Time: [Timestamp]
+• Impact: [Services/Users Affected]
+• Current Status: [Restored/Degraded]
+
+NEXT STEPS:
+• Post-mortem scheduled: [Date/Time]
+• Remediation plan: [Link/Notes]
+
+Contact [Incident Manager] for immediate questions.${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+},
+
+// Hardware: End-of-Life (EOL) Notification
+{
+  id: "eol-notice-001",
+  subject: "End-of-Life Notice – [Device/Model]",
+  category: "Hardware Management",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}This is notice that [Device/Model] has reached End of Life (EOL) as of [Date].
+
+IMPACT:
+• Affected Units: [Count/Locations]
+• Risk: [Security/Support/Performance]
+
+RECOMMENDATION:
+• Replace by: [Target Date]
+• Suggested models: [Options]
+• Data migration required: [Yes/No]
+
+Please advise if there are business constraints to the replacement schedule.${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+},
+
+// Assets: Asset Transfer Notification
+{
+  id: "asset-transfer-001",
+  subject: "Asset Transfer Notification – [Asset Tag]",
+  category: "Asset Management",
+  body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Please be advised that asset [Asset Tag / Serial] has been transferred:
+
+FROM:
+• Owner/Dept: [Name / Dept]
+TO:
+• New Owner/Dept: [Name / Dept]
+Effective Date: [Date]
+
+ACTION ITEMS:
+• Update asset register
+• Reassign warranties/licenses
+• Verify setup at new location
+
+Confirm when transfer completed.${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+},
+
+// Licensing: License Compliance Audit Request
+{
+  id: "license-audit-001",
+  subject: "License Compliance Audit – Action Required",
+  category: "Finance / Compliance",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}We are conducting a software license audit for [Product] across all departments.
+
+REQUEST:
+• Confirm installed instances: [By Date]
+• User/Device list: [Provide CSV/Link]
+• License keys: [If applicable]
+
+Non-responses may result in forced deactivation to maintain compliance.${EMAIL_CONSTANTS.FULL_SIGNATURE}`
+},
+
+// Network: VPN Access Revocation
+{
+  id: "vpn-revoke-001",
+  subject: "VPN Access Revocation – [User] (Required Action)",
+  category: "Network",
+  body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}VPN access for [User] will be revoked on [Date] due to [Reason: role change/termination/inactivity].
+
+IMPACT:
+• Access to: [Systems]
+• Effective: [Date/Time]
+
+If access must be retained for business reasons, request an exception by replying with justification.${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+},
+
+// Onboarding: IT Onboarding Checklist (for new hires)
+{
+  id: "it-onboard-checklist-001",
+  subject: "IT Onboarding Checklist – [New Hire Name]",
+  category: "HR / IT Onboarding",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Welcome aboard! Below are the IT onboarding items completed / pending for [New Hire]:
+
+COMPLETED:
+• Account created: [Username]
+• Laptop assigned: [Asset Tag]
+• Email configured: [Yes/No]
+
+PENDING:
+• Access to [Systems]
+• MFA enrollment
+• Required trainings: [List]
+
+Please confirm completion or notify IT of outstanding items.${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+},
+
+// Software: Decommission Notice
+{
+  id: "software-decomm-001",
+  subject: "Software Decommission Notice – [Application Name]",
+  category: "Software",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}We plan to decommission [Application Name] on [Decomm Date].
+
+REASON:
+• [Rationale]
+
+IMPACT:
+• Users affected: [Groups]
+• Data migration plan: [Details]
+• Read-only access until: [Date]
+
+Please migrate required data and report blockers by [Cutoff Date].${EMAIL_CONSTANTS.FULL_SIGNATURE}`
 }
 
-];
 
+
+];
 
 
 
