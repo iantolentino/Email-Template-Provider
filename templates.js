@@ -3703,23 +3703,24 @@ Please migrate required data and report blockers by [Cutoff Date].${EMAIL_CONSTA
    id: "charger-findings",
   subject: "Defective Charger Assessment [DATE]]",
   category: "IT",
-  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}We plan to decommission [Application Name] on [Decomm Date].
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}
 
 Good day,
-Sending to you the Laptop Charger Finding of Ms. Rina, please see below details.
-User: Ms. Rina Dela Cruz
-Model: x240
-PC Name: PC14060029J
-Model: ADLX65NCT3A
-LC PN: 36200292
-FRU: 65N0322
+Sending to you the Laptop Charger Finding of Ms. fname Lname, please see below details.
+User: fname lastname
+Model: lenovo x999
+PC Name: PC1234567
+Model: 123123123
+LC PN: 123123
+FRU: 123123
 
 Findings:
 Upon inspection, the charger is either not functioning or has a loose connection. It is currently not usable and may pose a safety risk due to unstable power delivery.
 
 
-Recommendation: For Replacement. Kindly arrange for a replacement at your earliest convenience. Please coordinate with the procurement.`
+Recommendation: For Replacement. Kindly arrange for a replacement at your earliest convenience. Please coordinate with the procurement.
   
+Regards`
 }
 
 ];
