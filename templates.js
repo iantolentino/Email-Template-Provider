@@ -3697,9 +3697,30 @@ IMPACT:
 • Read-only access until: [Date]
 
 Please migrate required data and report blockers by [Cutoff Date].${EMAIL_CONSTANTS.FULL_SIGNATURE}`
+},
+
+{
+   id: "charger-findings",
+  subject: "Defective Charger Assessment [DATE]]",
+  category: "IT",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}We plan to decommission [Application Name] on [Decomm Date].
+
+Good day,
+Sending to you the Laptop Charger Finding of Ms. Rina, please see below details.
+User: Ms. Rina Dela Cruz
+Model: x240
+PC Name: PC14060029J
+Model: ADLX65NCT3A
+LC PN: 36200292
+FRU: 65N0322
+
+Findings:
+Upon inspection, the charger is either not functioning or has a loose connection. It is currently not usable and may pose a safety risk due to unstable power delivery.
+
+
+Recommendation: For Replacement. Kindly arrange for a replacement at your earliest convenience. Please coordinate with the procurement.`
+  
 }
-
-
 
 ];
 
