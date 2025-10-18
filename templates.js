@@ -3721,9 +3721,275 @@ Upon inspection, the charger is either not functioning or has a loose connection
 Recommendation: For Replacement. Kindly arrange for a replacement at your earliest convenience. Please coordinate with the procurement.
   
 Regards`
+},
+
+ // Add these to your customTemplates array:
+
+// 🛍️ Retail Operations
+{
+  id: "retail-inventory-001",
+  subject: "Inventory Stock Alert - [Product Name]",
+  category: "Retail Operations",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Inventory alert for [Product Name]:
+
+Current Stock: [Number]
+Minimum Threshold: [Number]
+Reorder Point: [Number]
+
+Urgency: [High/Medium/Low]
+Recommended Action: [Restock/Adjust Order]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+},
+
+{
+  id: "retail-sales-001",
+  subject: "Daily Sales Report - [Date]",
+  category: "Retail Operations",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Sales summary for [Date]:
+
+Total Revenue: [Amount]
+Transactions: [Number]
+Average Sale: [Amount]
+Top Products: [List]
+
+Goals: [Met/Not Met]
+Notes: [Key Observations]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+},
+
+// 🏗️ Construction Projects
+{
+  id: "construction-safety-001",
+  subject: "Safety Inspection Report - [Site Name]",
+  category: "Construction Projects",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Safety inspection completed:
+
+Site: [Location]
+Date: [Date]
+Inspector: [Name]
+
+Findings: [Number] Issues
+Critical Items: [List]
+Compliance: [Status]
+
+Actions Required: [List]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+},
+
+{
+  id: "construction-progress-001",
+  subject: "Project Progress Update - [Project Name]",
+  category: "Construction Projects",
+  body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Progress update for [Project Name]:
+
+Status: [Percentage] Complete
+This Week: [Accomplishments]
+Next Week: [Planned Work]
+Blockers: [Issues if any]
+
+On Schedule: [Yes/No]
+Budget Status: [On Track/Over]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+},
+
+// 📚 Education Sector
+{
+  id: "education-course-001",
+  subject: "Course Enrollment Update - [Course Name]",
+  category: "Education Sector",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Enrollment update:
+
+Course: [Name]
+Current Enrollment: [Number]
+Capacity: [Number]
+Waitlist: [Number]
+
+Status: [Open/Closed]
+Action Needed: [If any]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+},
+
+{
+  id: "education-faculty-001",
+  subject: "Faculty Meeting Agenda - [Date]",
+  category: "Education Sector",
+  body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Faculty meeting agenda:
+
+Date: [Date]
+Time: [Time]
+Location: [Room/Virtual]
+
+Agenda:
+1. [Topic 1]
+2. [Topic 2]
+3. [Topic 3]
+
+Preparation: [Materials Needed]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+},
+
+// 🤖 Technology Innovation
+{
+  id: "tech-innovation-001",
+  subject: "Innovation Proposal - [Idea Name]",
+  category: "Technology Innovation",
+  body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}New innovation proposal:
+
+Idea: [Brief Description]
+Problem Solved: [Explanation]
+Potential Impact: [Benefits]
+Resources Needed: [List]
+
+Next Steps: [Review/Testing]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+},
+
+{
+  id: "tech-feature-001",
+  subject: "Feature Request - [Product Name]",
+  category: "Technology Innovation",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Feature request received:
+
+Requested By: [Name/Dept]
+Feature: [Description]
+Use Case: [Scenario]
+Priority: [High/Medium/Low]
+
+Status: [Under Review/Approved]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+},
+
+// 🌐 Global Operations
+{
+  id: "global-coordination-001",
+  subject: "International Team Sync - [Project]",
+  category: "Global Operations",
+  body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Global team sync:
+
+Project: [Name]
+Time: [Time with Timezones]
+Agenda: [Key Topics]
+Participants: [Regions/Teams]
+
+Preparation: [Documents to Review]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+},
+
+{
+  id: "global-compliance-001",
+  subject: "Regional Compliance Update - [Region]",
+  category: "Global Operations",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Compliance update for [Region]:
+
+Regulation: [Name/Type]
+Effective Date: [Date]
+Changes: [Summary]
+Impact: [Areas Affected]
+
+Action Required: [Yes/No]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+},
+
+// 🔬 Quality Assurance
+{
+  id: "qa-testing-001",
+  subject: "QA Test Results - [Product/Version]",
+  category: "Quality Assurance",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}QA testing completed:
+
+Product: [Name]
+Version: [Number]
+Tests Run: [Number]
+Pass Rate: [Percentage]
+
+Critical Issues: [Number]
+Status: [Ready/Needs Fixes]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+},
+
+// 📊 Performance Management
+{
+  id: "performance-review-001",
+  subject: "Performance Review - [Employee Name]",
+  category: "HR & Personnel",
+  body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Performance review scheduled:
+
+Employee: [Name]
+Date: [Date]
+Time: [Time]
+Duration: [Length]
+
+Preparation: [Documents Needed]
+Focus Areas: [Topics to Discuss]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+},
+
+// 🔧 IT Operations
+{
+  id: "it-documentation-001",
+  subject: "Documentation Update Required - [System]",
+  category: "IT Operations",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Documentation update needed:
+
+System: [Name]
+Changes: [What's New]
+Deadline: [Date]
+Owner: [Responsible Person]
+
+Impact: [Users/Affected]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+},
+
+// 💼 Business Development
+{
+  id: "bizdev-partnership-001",
+  subject: "Partnership Opportunity - [Company]",
+  category: "Business Development",
+  body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}New partnership opportunity:
+
+Company: [Name]
+Opportunity: [Description]
+Potential Value: [Estimate]
+Next Steps: [Actions]
+
+Timeline: [Proposed Dates]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+},
+
+// 🚚 Logistics & Shipping
+{
+  id: "logistics-shipment-001",
+  subject: "Shipment Delay Notice - [Tracking #]",
+  category: "Logistics",
+  body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Shipment delay alert:
+
+Tracking: [Number]
+Expected: [New Date]
+Reason: [Delay Cause]
+Impact: [Business Effect]
+
+Alternative: [Options if any]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+},
+
+// 🎯 Sales Operations
+{
+  id: "sales-pipeline-001",
+  subject: "Pipeline Review - [Quarter]",
+  category: "Sales",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Pipeline review:
+
+Quarter: [QX Year]
+Total Value: [Amount]
+Deals: [Number]
+Conversion Rate: [Percentage]
+
+Focus Areas: [Priorities]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+},
+
+// 🔄 Process Improvement
+{
+  id: "process-improvement-001",
+  subject: "Process Optimization Suggestion",
+  category: "Operations",
+  body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Process improvement idea:
+
+Current Process: [Brief Description]
+Suggested Change: [Improvement]
+Expected Benefit: [Efficiency/Savings]
+Implementation: [Effort Required]
+
+Impact: [Positive Effects]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
 }
 
+ 
 ];
+
 
 
 
