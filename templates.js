@@ -1,8 +1,3 @@
-// templates.js
-// Comprehensive Email Template Library for Professional Communications
-// Version 2.0 - Enhanced with Industry-Specific and Cross-Departmental Templates 
- 
-// Common email template constants
 const EMAIL_CONSTANTS = {
   // Basic salutations
   SHORT_SALUTATION: 'Dear [Name],\n\n',
@@ -2995,7 +2990,6 @@ Please review attached details.
 
 Best regards.`
   },
-  // templates.js (additional templates)
 
 // 🔹 Password & Account
   {
@@ -4501,7 +4495,7 @@ MEETINGS:
 • Daily Standup: [Time]
 • Review: [Date/Time]
 • Retrospective: [Date/Time]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
-  }
+  },
 
   // 📱 Mobile Development
   {
@@ -4633,6 +4627,7 @@ ROLLBACK: [Model Version]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
 
  
 ];
+
 
 
 
