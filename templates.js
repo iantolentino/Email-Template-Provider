@@ -1,4 +1,4 @@
-const EMAIL_CONSTANTS = {
+const EMAIL_CONSTANTS = { 
   // Basic salutations
   SHORT_SALUTATION: 'Dear [Name],\n\n',
   TEAM_SALUTATION: 'Dear Team,\n\n',
@@ -4627,6 +4627,7 @@ ROLLBACK: [Model Version]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
 
  
 ];
+
 
 
 
