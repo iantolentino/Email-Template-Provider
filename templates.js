@@ -3985,10 +3985,658 @@ Expected Benefit: [Efficiency/Savings]
 Implementation: [Effort Required]
 
 Impact: [Positive Effects]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
-}
+},
+
+   // 🏗️ Architecture & Design
+  {
+    id: "dev-arch-001",
+    subject: "Technical Design Document Review - [Feature/System]",
+    category: "Development",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Please review the technical design document for [Feature/System]:
+
+DOCUMENT OVERVIEW:
+• Purpose: [Brief Description]
+• Scope: [Components/Modules]
+• Author: [Name]
+• Review Deadline: [Date]
+
+KEY SECTIONS:
+1. Architecture Diagram
+2. Database Schema
+3. API Specifications
+4. Security Considerations
+5. Performance Implications
+
+REVIEW FOCUS:
+• Scalability: [Concerns/Suggestions]
+• Maintainability: [Code Quality Standards]
+• Integration: [External Systems]
+• Testing Strategy: [Coverage Requirements]
+
+Please provide feedback via: [PR/Comment Tool]
+Review completed by: [Date]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  // 🔄 Code Review
+  {
+    id: "dev-code-review-001",
+    subject: "Code Review Request - PR #[Number] - [Feature]",
+    category: "Development",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Code review requested for PR #[Number]:
+
+PR DETAILS:
+• Title: [PR Title]
+• Branch: [Branch Name]
+• Author: [Name]
+• Target: [Base Branch]
+
+CHANGES:
+• Files Modified: [Number]
+• Lines Added/Removed: [+X/-Y]
+• Related Issues: [JIRA/Ticket Links]
+
+SPECIFIC REVIEW REQUESTS:
+1. [Architecture Concerns]
+2. [Performance Impact]
+3. [Security Considerations]
+4. [Test Coverage]
+
+TESTING:
+• Unit Tests: [Added/Updated]
+• Integration Tests: [Status]
+• Manual Testing: [Scenarios Covered]
+
+URGENCY: [High/Medium/Low]
+Merge Deadline: [If Applicable]
+
+Review URL: [PR Link]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+  },
+
+  // 🐛 Bug Reports & Issues
+  {
+    id: "dev-bug-001",
+    subject: "Bug Report - [Component] - [Short Description]",
+    category: "Development",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}New bug identified:
+
+BUG SUMMARY:
+• Component: [Frontend/Backend/API]
+• Severity: [Critical/High/Medium/Low]
+• Environment: [Production/Staging/Dev]
+• Reproduction Rate: [Always/Intermittent]
+
+STEPS TO REPRODUCE:
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
+
+EXPECTED BEHAVIOR:
+[What should happen]
+
+ACTUAL BEHAVIOR:
+[What actually happens]
+
+ENVIRONMENT:
+• Browser/OS: [Details]
+• Version: [App Version]
+• User: [If Specific]
+
+LOGS/SCREENSHOTS:
+[Attachments/References]
+
+ASSIGNED TO: [Team/Individual]
+PRIORITY: [Immediate/Next Sprint/Backlog]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+  },
+
+  // 📦 Deployment & Releases
+  {
+    id: "dev-deploy-001",
+    subject: "Deployment Plan - Version [X.X.X] - [Environment]",
+    category: "Development",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Deployment plan for version [X.X.X]:
+
+DEPLOYMENT DETAILS:
+• Version: [X.X.X]
+• Environment: [Production/Staging]
+• Scheduled: [Date/Time]
+• Estimated Duration: [Time]
+• Rollback Strategy: [Procedure]
+
+CHANGES INCLUDED:
+1. [Feature/Bugfix 1]
+2. [Feature/Bugfix 2]
+3. [Feature/Bugfix 3]
+
+PRE-DEPLOYMENT CHECKS:
+• [ ] Database Migrations
+• [ ] Configuration Updates
+• [ ] Cache Clearance
+• [ ] Backup Completion
+
+DEPLOYMENT STEPS:
+1. [Step 1 - Time]
+2. [Step 2 - Time]
+3. [Step 3 - Time]
+
+POST-DEPLOYMENT VERIFICATION:
+• [ ] Smoke Tests
+• [ ] Monitoring Alerts
+• [ ] User Feedback
+
+ROLLBACK TRIGGERS:
+• [Critical Error Count]
+• [Performance Degradation]
+• [User Complaints]
+
+Contact: [On-call Engineer]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  // 🔐 Security & Vulnerabilities
+  {
+    id: "dev-security-001",
+    subject: "Security Vulnerability Alert - [Component] - [CVE/Severity]",
+    category: "Development",
+    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Security vulnerability detected:
+
+VULNERABILITY DETAILS:
+• Component: [Library/Service]
+• CVE: [CVE Identifier]
+• Severity: [Critical/High/Medium/Low]
+• CVSS Score: [X.X/10]
+
+IMPACT ASSESSMENT:
+• Attack Vector: [Network/Adjacent/Local]
+• Attack Complexity: [High/Low]
+• Privileges Required: [None/User/Admin]
+• User Interaction: [Required/Not Required]
+
+AFFECTED SYSTEMS:
+• [Service/Application 1]
+• [Service/Application 2]
+• [Service/Application 3]
+
+IMMEDIATE ACTIONS:
+1. [Containment Step]
+2. [Mitigation Step]
+3. [Communication Step]
+
+PATCH AVAILABILITY:
+• Vendor Patch: [Available/Not Available]
+• Workaround: [If Available]
+• Timeline: [ETA for Fix]
+
+ASSIGNED TO: [Security Team/Developer]
+DUE DATE: [Remediation Deadline]${EMAIL_CONSTANTS.EMERGENCY_SIGNATURE}`
+  },
+
+  // 📊 Performance & Monitoring
+  {
+    id: "dev-performance-001",
+    subject: "Performance Regression Report - [Service/Metric]",
+    category: "Development",
+    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Performance regression detected:
+
+PERFORMANCE DATA:
+• Metric: [Response Time/Throughput/Error Rate]
+• Service: [Service Name]
+• Baseline: [Previous Value]
+• Current: [Current Value]
+• Degradation: [X%]
+
+IMPACT ANALYSIS:
+• User Experience: [High/Medium/Low]
+• Business Impact: [Revenue/Customer Satisfaction]
+• Scope: [All Users/Specific Segment]
+
+ROOT CAUSE SUSPECTS:
+1. [Recent Deployment]
+2. [Infrastructure Change]
+3. [Traffic Pattern Change]
+4. [Third-party Service]
+
+INVESTIGATION PLAN:
+• [ ] Log Analysis
+• [ ] Profiling
+• [ ] Load Testing
+• [ ] Code Review
+
+URGENCY: [Immediate/This Sprint/Next Sprint]
+ASSIGNED TO: [Performance Team]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  // 🧪 Testing & QA
+  {
+    id: "dev-testing-001",
+    subject: "Test Plan Review - [Feature/Release]",
+    category: "Development",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Test plan ready for review:
+
+TEST PLAN OVERVIEW:
+• Feature: [Feature Name]
+• Release: [Version]
+• Test Lead: [Name]
+• Timeline: [Start-End Dates]
+
+TEST COVERAGE:
+• Unit Tests: [Number/Coverage %]
+• Integration Tests: [Number/Scenarios]
+• E2E Tests: [Number/User Journeys]
+• Manual Tests: [Test Cases]
+
+ENVIRONMENTS:
+• Development: [Ready/Not Ready]
+• Staging: [Ready/Not Ready]
+• Production-like: [Available/Not Available]
+
+SPECIFIC TEST SCENARIOS:
+1. [Happy Path]
+2. [Edge Cases]
+3. [Error Conditions]
+4. [Performance/Load]
+
+RESOURCE REQUIREMENTS:
+• Test Data: [Requirements]
+• Environment Setup: [Needs]
+• Tools: [Software/Hardware]
+
+Review deadline: [Date]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+  },
+
+  // 🔄 API Development
+  {
+    id: "dev-api-001",
+    subject: "API Change Notification - [API Name] - [Version]",
+    category: "Development",
+    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}API changes upcoming:
+
+API DETAILS:
+• Name: [API Name]
+• Version: [Current → New]
+• Change Type: [Breaking/Non-breaking]
+• Release Date: [Date]
+
+CHANGES SUMMARY:
+• Added: [Endpoints/Fields]
+• Modified: [Endpoints/Fields]
+• Deprecated: [Endpoints/Fields]
+• Removed: [Endpoints/Fields]
+
+MIGRATION GUIDE:
+• Before: [Old Implementation]
+• After: [New Implementation]
+• Breaking Changes: [Specific Details]
+
+TESTING:
+• Documentation: [URL]
+• Sandbox: [Environment Details]
+• Support: [Contact Information]
+
+IMPACTED CLIENTS:
+• [Internal Service 1]
+• [External Client 1]
+• [Mobile App]
+
+ACTION REQUIRED: [By Date]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  // 📚 Documentation
+  {
+    id: "dev-docs-001",
+    subject: "Documentation Update Required - [System/Feature]",
+    category: "Development",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Documentation update needed:
+
+DOCUMENTATION GAP:
+• System: [System Name]
+• Feature: [Feature Description]
+• Missing: [API Docs/User Guide/Architecture]
+
+REASON FOR UPDATE:
+• [New Feature]
+• [Changed Behavior]
+• [Bug Fix]
+• [Process Change]
+
+REQUIRED SECTIONS:
+1. [Overview]
+2. [Usage Examples]
+3. [Configuration]
+4. [Troubleshooting]
+
+DEADLINE: [Date]
+ASSIGNED TO: [Technical Writer/Developer]
+
+RESOURCES:
+• Source Code: [Repository Link]
+• Existing Docs: [Documentation Link]
+• Subject Expert: [Contact Person]
+
+Please update by: [Date]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+  },
+
+  // 🛠️ DevOps & Infrastructure
+  {
+    id: "dev-ops-001",
+    subject: "Infrastructure Change Request - [Environment]",
+    category: "Development",
+    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Infrastructure change requested:
+
+CHANGE DETAILS:
+• Environment: [Production/Staging/Dev]
+• Resource: [Server/Database/Network]
+• Change Type: [Scale/Modify/Add/Remove]
+• Requestor: [Name/Team]
+
+SPECIFICATIONS:
+• Current: [Existing Configuration]
+• Requested: [New Configuration]
+• Justification: [Business/Technical Reason]
+
+IMPACT ASSESSMENT:
+• Downtime: [Yes/No/Duration]
+• Risk: [High/Medium/Low]
+• Rollback: [Possible/Not Possible]
+
+APPROVALS REQUIRED:
+• [ ] Infrastructure Lead
+• [ ] Security Team
+• [ ] Cost Management
+
+TIMELINE:
+• Requested Date: [Date]
+• Maintenance Window: [If Applicable]
+
+Change ticket: [Ticket Link]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  // 🔍 Incident Post-Mortem
+  {
+    id: "dev-incident-001",
+    subject: "Incident Post-Mortem - [Service] - [Date]",
+    category: "Development",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Post-mortem for incident on [Date]:
+
+INCIDENT SUMMARY:
+• Service: [Service Name]
+• Start Time: [Timestamp]
+• End Time: [Timestamp]
+• Duration: [X hours/minutes]
+• Impact: [Users/Affected]
+
+TIMELINE:
+• Detection: [How/When]
+• Response: [Actions Taken]
+• Resolution: [Fix Applied]
+• Recovery: [Service Restored]
+
+ROOT CAUSE:
+• Primary: [Main Cause]
+• Contributing: [Secondary Factors]
+
+LESSONS LEARNED:
+• What Went Well: [Positive Aspects]
+• What Could Improve: [Improvement Areas]
+
+ACTION ITEMS:
+1. [Preventive Measure - Owner - Due Date]
+2. [Detection Improvement - Owner - Due Date]
+3. [Process Change - Owner - Due Date]
+
+Follow-up meeting: [Date/Time]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  // 📈 Technical Debt
+  {
+    id: "dev-debt-001",
+    subject: "Technical Debt Assessment - [System/Component]",
+    category: "Development",
+    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Technical debt assessment:
+
+SYSTEM OVERVIEW:
+• Component: [System/Module]
+• Age: [Time in Production]
+• Criticality: [High/Medium/Low]
+
+DEBT CATEGORIES:
+1. Code Quality
+   • Issues: [Number/Severity]
+   • Impact: [Maintainability]
+
+2. Architecture
+   • Issues: [Coupling/Complexity]
+   • Impact: [Scalability]
+
+3. Dependencies
+   • Outdated: [Libraries/Packages]
+   • Security: [Vulnerabilities]
+
+4. Documentation
+   • Gaps: [Areas Missing]
+   • Accuracy: [Current/Outdated]
+
+RECOMMENDATIONS:
+• Immediate: [Critical Items]
+• Short-term: [Next Quarter]
+• Long-term: [Roadmap]
+
+EFFORT ESTIMATE: [Story Points/Hours]
+BUSINESS IMPACT: [Justification]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  // 🚀 Feature Launch
+  {
+    id: "dev-launch-001",
+    subject: "Feature Launch Checklist - [Feature Name]",
+    category: "Development",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Feature launch checklist:
+
+FEATURE DETAILS:
+• Name: [Feature Name]
+• Release: [Version]
+• Launch Date: [Date]
+• Owner: [Product Manager]
+
+PRE-LAUNCH CHECKS:
+• [ ] Code Review Completed
+• [ ] Tests Passed
+• [ ] Performance Validated
+• [ ] Security Review
+• [ ] UX Review
+• [ ] Documentation Updated
+
+LAUNCH PLAN:
+• Time: [Launch Time]
+• Method: [Blue-Green/Canary]
+• Monitoring: [Dashboards/Alerts]
+• Rollback: [Procedure]
+
+COMMUNICATION:
+• [ ] Internal Teams Notified
+• [ ] Support Team Briefed
+• [ ] Release Notes Published
+• [ ] Customer Communication Ready
+
+POST-LAUNCH:
+• [ ] Monitoring Active
+• [ ] Support Ready
+• [ ] Feedback Collection
+• [ ] Success Metrics Tracking
+
+Launch coordinator: [Name]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  // 🔄 Sprint Planning
+  {
+    id: "dev-sprint-001",
+    subject: "Sprint [Number] Planning - [Start Date] to [End Date]",
+    category: "Development",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Sprint [Number] planning details:
+
+SPRINT GOALS:
+1. [Primary Objective]
+2. [Secondary Objective]
+3. [Stretch Goals]
+
+CAPACITY:
+• Team Members: [List]
+• Total Capacity: [Story Points/Hours]
+• Time Off: [Absences]
+
+BACKLOG ITEMS:
+1. [User Story 1] - [Points] - [Assignee]
+2. [User Story 2] - [Points] - [Assignee]
+3. [User Story 3] - [Points] - [Assignee]
+
+TECHNICAL TASKS:
+• [Refactoring/Infrastructure]
+• [Bug Fixes]
+• [Debt Reduction]
+
+DEPENDENCIES:
+• [Blockers/Risks]
+• [External Teams]
+• [Infrastructure]
+
+MEETINGS:
+• Daily Standup: [Time]
+• Review: [Date/Time]
+• Retrospective: [Date/Time]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+  }
+];
+
+// 🎯 Specialized Development Categories
+const specializedDevTemplates = [
+  // 📱 Mobile Development
+  {
+    id: "mobile-release-001",
+    subject: "Mobile App Release - [Platform] - Version [X.X.X]",
+    category: "Mobile Development",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}Mobile app release ready:
+
+PLATFORM: [iOS/Android/Both]
+VERSION: [X.X.X]
+BUILD: [Build Number]
+RELEASE DATE: [Date]
+
+APP STORE REQUIREMENTS:
+• [ ] Screenshots Updated
+• [ ] Description Finalized
+• [ ] Keywords Optimized
+• [ ] Release Notes Ready
+• [ ] Compliance Verified
+
+TESTING COMPLETED:
+• [ ] Device Compatibility
+• [ ] Feature Functionality
+• [ ] Performance Metrics
+• [ ] Battery Impact
+• [ ] Network Conditions
+
+APPROVALS:
+• [ ] Product Manager
+• [ ] Legal/Compliance
+• [ ] Marketing
+
+Release coordinator: [Name]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  // 🌐 Frontend Development
+  {
+    id: "frontend-ux-001",
+    subject: "UX/UI Review Required - [Component/Page]",
+    category: "Frontend Development",
+    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}UX/UI review requested:
+
+COMPONENT: [Name/Description]
+URL: [Preview Link]
+DESIGN REFERENCE: [Figma/Zeplin Link]
+
+REVIEW FOCUS:
+• Visual Design: [Alignment with Guidelines]
+• User Experience: [Flow/Interactions]
+• Accessibility: [WCAG Compliance]
+• Responsiveness: [Breakpoints]
+
+SPECIFIC QUESTIONS:
+1. [Design Question 1]
+2. [Design Question 2]
+3. [Design Question 3]
+
+DEADLINE: [Date]
+DESIGNER: [Assigned Designer]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+  },
+
+  // 🗄️ Database Development
+  {
+    id: "db-migration-001",
+    subject: "Database Migration Plan - [Change Description]",
+    category: "Database Development",
+    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Database migration scheduled:
+
+MIGRATION DETAILS:
+• Change: [Schema/Data/Migration]
+• Database: [Name/Environment]
+• Scheduled: [Date/Time]
+• Estimated Duration: [Time]
+
+CHANGES:
+• Tables Modified: [List]
+• Columns Added/Modified: [Details]
+• Indexes Created/Dropped: [Details]
+• Data Migration: [If Applicable]
+
+ROLLBACK PLAN:
+• Backup: [Strategy]
+• Recovery: [Time Estimate]
+• Verification: [Process]
+
+IMPACT:
+• Downtime: [Yes/No/Duration]
+• Performance: [Expected Impact]
+• Applications: [Affected Services]
+
+APPROVALS:
+• [ ] DBA
+• [ ] Application Teams
+• [ ] Infrastructure${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  // 🤖 AI/ML Development
+  {
+    id: "ml-model-001",
+    subject: "ML Model Deployment - [Model Name] - Version [X.X]",
+    category: "AI/ML Development",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}ML model deployment ready:
+
+MODEL DETAILS:
+• Name: [Model Name]
+• Version: [X.X]
+• Type: [Classification/Regression/etc.]
+• Training Data: [Dataset/Size]
+
+PERFORMANCE METRICS:
+• Accuracy: [X%]
+• Precision: [X%]
+• Recall: [X%]
+• F1 Score: [X%]
+
+DEPLOYMENT:
+• Environment: [Production/Staging]
+• Infrastructure: [Requirements]
+• Monitoring: [Metrics/Dashboards]
+
+VALIDATION:
+• [ ] A/B Testing Setup
+• [ ] Performance Baseline
+• [ ] Bias/Fairness Check
+• [ ] Explainability Reports
+
+ROLLBACK: [Model Version]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  }
 
  
 ];
+
 
 
 
