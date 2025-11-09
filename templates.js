@@ -4502,10 +4502,7 @@ MEETINGS:
 • Review: [Date/Time]
 • Retrospective: [Date/Time]${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
   }
-];
 
-// 🎯 Specialized Development Categories
-const specializedDevTemplates = [
   // 📱 Mobile Development
   {
     id: "mobile-release-001",
@@ -4636,6 +4633,7 @@ ROLLBACK: [Model Version]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
 
  
 ];
+
 
 
 
