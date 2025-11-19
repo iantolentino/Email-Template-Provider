@@ -4623,10 +4623,276 @@ VALIDATION:
 • [ ] Explainability Reports
 
 ROLLBACK: [Model Version]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
-  }
+  },
 
+  // ⚖️ Legal & Contracts
+  {
+    id: "legal-nda-001",
+    subject: "Non-Disclosure Agreement (NDA) Request - [Partner/Entity]",
+    category: "Legal",
+    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Please review and sign the attached Non-Disclosure Agreement regarding [Project/Topic]:
+
+AGREEMENT DETAILS:
+• Counterparty: [Company/Name]
+• Purpose: [Discussion Context]
+• Term: [Duration]
+• Jurisdiction: [Region]
+
+ACTION REQUIRED:
+1. Review the attached PDF.
+2. Sign via [DocuSign/Adobe Sign Link].
+3. Return by [Date].
+
+If you have legal concerns, please contact the Legal Department before signing.${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  {
+    id: "legal-hold-001",
+    subject: "URGENT: Legal Hold Notice - Preservation of Documents",
+    category: "Legal",
+    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}PRIVILEGED AND CONFIDENTIAL
+
+You are hereby notified of a Legal Hold regarding [Case/Matter Name].
+
+OBLIGATIONS:
+Effective immediately, you must preserve all documents, data, and communications (emails, chats, files, notes) related to:
+• [Subject 1]
+• [Subject 2]
+• Timeframe: [Start Date] to Present
+
+DO NOT:
+• Delete, modify, or overwrite relevant files.
+• Discard physical documents.
+• Auto-archive emails (disable auto-delete).
+
+This hold remains in effect until you receive an official "Release Notice."
+
+Please reply "Received and Understood" to this email.${EMAIL_CONSTANTS.FULL_SIGNATURE}`
+  },
+
+  // ✈️ Travel & Expenses
+  {
+    id: "travel-req-001",
+    subject: "Travel Authorization Request - [Employee Name]",
+    category: "Travel",
+    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}I am requesting approval for the following business travel:
+
+TRIP DETAILS:
+• Purpose: [Conference/Client Meeting/Training]
+• Destination: [City, Country]
+• Dates: [Start Date] - [End Date]
+
+ESTIMATED BUDGET:
+• Transport (Air/Train): [Amount]
+• Accommodation: [Amount]
+• Per Diem/Meals: [Amount]
+• Incidentals: [Amount]
+• Total Request: [Total Amount]
+
+BUSINESS JUSTIFICATION:
+[Explanation of ROI or necessity of trip]
+
+Client Chargeable: [Yes/No]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  {
+    id: "travel-itinerary-001",
+    subject: "Travel Itinerary & Confirmation - [Destination]",
+    category: "Travel",
+    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Here is your confirmed travel itinerary for [Destination]:
+
+FLIGHTS:
+• Outbound: [Airline] [Flight #] | Dep: [Time] | Arr: [Time]
+• Return: [Airline] [Flight #] | Dep: [Time] | Arr: [Time]
+• Reference: [PNR Code]
+
+ACCOMMODATION:
+• Hotel: [Name]
+• Address: [Address]
+• Check-in: [Date] | Check-out: [Date]
+• Confirmation: [Number]
+
+GROUND TRANSPORT:
+• Pickup: [Details]
+• Car Rental: [Agency/Ref #]
+
+Emergency Travel Support: [Phone Number]
+Insurance Policy: [Link/Number]
+
+Safe travels!${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}`
+  },
+
+  // 🏢 Office Administration
+  {
+    id: "admin-visitor-001",
+    subject: "Visitor Notification - [Guest Name] - [Date]",
+    category: "Administration",
+    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Please be advised of an external visitor:
+
+VISITOR DETAILS:
+• Name: [Guest Name]
+• Company: [Company]
+• Arrival Time: [Time]
+• Host: [Employee Name]
+
+ACCESS REQUIRED:
+• Parking Spot: [Yes/No]
+• WiFi Access: [Yes/No]
+• Security Badge: [Visitor Pass Type]
+• Conference Room: [Room Name]
+
+Please ensure the reception desk is aware.${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+  },
+
+  {
+    id: "admin-supplies-001",
+    subject: "Office Supply Order Request",
+    category: "Administration",
+    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Requesting the following office supplies for [Department]:
+
+ITEMS:
+1. [Item Name] - [Quantity] - [SKU if known]
+2. [Item Name] - [Quantity] - [SKU if known]
+3. [Item Name] - [Quantity] - [SKU if known]
+
+Delivery Needed By: [Date]
+Budget Code: [Code]
+
+Regards,
+[Name]`
+  },
+
+  // 💼 Sales (External)
+  {
+    id: "sales-intro-001",
+    subject: "Introduction: [Company Name] <> [Prospect Company]",
+    category: "Sales",
+    body: `Dear [Prospect Name],
+
+I hope this email finds you well.
+
+I am writing to introduce [Company Name] and explore how we might support [Prospect Company] with [Specific Pain Point/Goal]. We specialize in [Core Competency] and have recently helped companies like [Reference 1] and [Reference 2] achieve [Result].
+
+Would you be open to a brief 15-minute call on [Day] or [Day] to discuss your current priorities regarding [Topic]?
+
+Best regards,
+[Name]
+[Title]
+[Link to Calendar]`
+  },
+
+  {
+    id: "sales-proposal-001",
+    subject: "Proposal: [Project Name] for [Client Name]",
+    category: "Sales",
+    body: `Dear [Client Name],
+
+Thank you for the opportunity to discuss your needs regarding [Project]. Based on our conversation, we have prepared the attached proposal.
+
+HIGHLIGHTS:
+• Scope: [Brief Summary]
+• Timeline: [Estimated Duration]
+• Investment: [Total Cost]
+
+We are confident that this solution will help you achieve [Client Goal].
+
+I will follow up on [Date] to answer any questions.
+
+Best regards,
+[Name]
+[Title]`
+  },
+
+  // 👥 Internships & Mentorship
+  {
+    id: "intern-welcome-001",
+    subject: "Welcome to the Internship Program - [Intern Name]",
+    category: "HR/Internship",
+    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Welcome to the team! We are excited to have you join our internship program.
+
+PROGRAM DETAILS:
+• Mentor: [Mentor Name]
+• Supervisor: [Manager Name]
+• Duration: [Start Date] - [End Date]
+
+FIRST WEEK AGENDA:
+• Orientation: [Date/Time]
+• Team Lunch: [Date/Time]
+• Project Briefing: [Date/Time]
+
+Please review the attached "Internship Handbook" prior to your start date.
+
+Best regards,
+HR Team`
+  },
+
+  {
+    id: "mentorship-request-001",
+    subject: "Mentorship Program - Pairing Request",
+    category: "HR/Mentorship",
+    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}I would like to request a mentor through the company mentorship program.
+
+GOALS:
+1. [Skill to Develop]
+2. [Career Path Interest]
+3. [Networking Goal]
+
+PREFERENCES:
+• Department: [Preferred Dept/Cross-functional]
+• Frequency: [Weekly/Monthly]
+
+I have attached my current resume and development plan for reference.
+
+Best regards,
+[Name]`
+  },
+
+  // 🛡️ Cybersecurity Awareness
+  {
+    id: "sec-phishing-alert-001",
+    subject: "Security Alert: Suspicious Email Campaigns Reported",
+    category: "Security Awareness",
+    body: `${EMAIL_CONSTANTS.ALL_STAFF_SALUTATION}We have received reports of a phishing campaign targeting our employees.
+
+INDICATORS OF COMPROMISE:
+• Subject Lines: [Example 1], [Example 2]
+• Sender: External addresses mimicking [Executive Names]
+• Content: Urgent requests for gift cards, wire transfers, or password resets.
+
+ACTION REQUIRED:
+1. Do NOT click links or download attachments from unknown sources.
+2. Verify the sender's email address carefully.
+3. Report suspicious emails using the "Report Phishing" button in your email client.
+
+Stay vigilant.${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}`
+  },
+
+  // 🚀 Executive Strategy
+  {
+    id: "exec-q-goals-001",
+    subject: "Q[X] Strategic Goals & Priorities",
+    category: "Executive",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}As we kick off Q[X], I want to align the team on our core strategic priorities.
+
+THEME: [Quarterly Theme]
+
+TOP 3 OBJECTIVES (OKRs):
+1. [Objective 1]
+   • Key Result: [Metric]
+   
+2. [Objective 2]
+   • Key Result: [Metric]
+
+3. [Objective 3]
+   • Key Result: [Metric]
+
+Let's stay focused and execute with excellence. Department leads will cascade specific team targets this week.
+
+${EMAIL_CONSTANTS.FULL_SIGNATURE}`
+  }
  
 ];
+
 
 
 
