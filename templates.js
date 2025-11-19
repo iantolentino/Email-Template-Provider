@@ -3,14 +3,16 @@ const EMAIL_CONSTANTS = {
   SHORT_SALUTATION: 'Dear [Name],\n\n',
   TEAM_SALUTATION: 'Dear Team,\n\n',
   DEPARTMENT_SALUTATION: 'Dear [Department] Team,\n\n',
+  ALL_STAFF_SALUTATION: 'Dear All,\n\n',
+  EMERGENCY_SALUTATION: 'URGENT NOTIFICATION\n\n',
   
   // Basic signatures
   SHORT_SIGNATURE: '\n\nRegards,\n[Name]', 
   POSITION_SIGNATURE: '\n\nRegards,\n[Name]\n[Position]',
   DEPARTMENT_SIGNATURE: '\n\nRegards,\n[Name]\n[Department]',
-  FULL_SIGNATURE: '\n\nRegards,\n[Name]\n[Position]\n[Department]\n[Contact Information]'
+  FULL_SIGNATURE: '\n\nRegards,\n[Name]\n[Position]\n[Department]\n[Contact Information]',
+  EMERGENCY_SIGNATURE: '\n\nEmergency Contact: [Contact Details]\n[Name]\n[Position]'
 };
-
 /*
 Category Structure:
 1. 🔧 Hardware Management
@@ -4889,9 +4891,10 @@ TOP 3 OBJECTIVES (OKRs):
 Let's stay focused and execute with excellence. Department leads will cascade specific team targets this week.
 
 ${EMAIL_CONSTANTS.FULL_SIGNATURE}`
-  },
+  }
  
 ];
+
 
 
 
