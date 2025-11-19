@@ -4889,9 +4889,10 @@ TOP 3 OBJECTIVES (OKRs):
 Let's stay focused and execute with excellence. Department leads will cascade specific team targets this week.
 
 ${EMAIL_CONSTANTS.FULL_SIGNATURE}`
-  }
+  },
  
 ];
+
 
 
 
