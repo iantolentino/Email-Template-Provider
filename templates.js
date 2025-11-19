@@ -4891,9 +4891,296 @@ TOP 3 OBJECTIVES (OKRs):
 Let's stay focused and execute with excellence. Department leads will cascade specific team targets this week.
 
 ${EMAIL_CONSTANTS.FULL_SIGNATURE}`
+  },
+
+  // 👥 HR: Recruitment & Culture
+  {
+    id: "hr-rejection-001",
+    subject: "Update on your application for [Position]",
+    category: "HR Recruitment",
+    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Thank you for giving us the opportunity to consider you for the [Position] role.
+
+We have reviewed your qualifications and, after careful consideration, have decided to proceed with other candidates whose experience more closely aligns with our current needs.
+
+We will keep your resume on file for future openings. We wish you the best in your job search.
+
+${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}`
+  },
+
+  {
+    id: "hr-offer-acceptance-001",
+    subject: "Acknowledgment of Offer Acceptance - [Candidate Name]",
+    category: "HR Recruitment",
+    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}We are thrilled to receive your signed offer letter!
+
+CONFIRMATION DETAILS:
+• Start Date: [Date]
+• Reporting Time: [Time]
+• Location: [Office Address / Remote Link]
+
+NEXT STEPS:
+Our onboarding team will send a separate email regarding:
+1. Laptop and equipment shipment
+2. IT account setup credentials
+3. First-week schedule
+
+We look forward to having you on the team.${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}`
+  },
+
+  {
+    id: "hr-recognition-001",
+    subject: "Kudos: Recognition for [Achievement/Project]",
+    category: "HR Culture",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}I want to take a moment to recognize [Employee Name] for their outstanding work on [Project/Task].
+
+CONTRIBUTION:
+[Details of what they did]
+
+IMPACT:
+• [Benefit 1]
+• [Benefit 2]
+
+Thank you for your dedication and hard work!${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  {
+    id: "hr-wellness-001",
+    subject: "Employee Wellness Check-in",
+    category: "HR Culture",
+    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Just a quick check-in to see how you are managing your workload and work-life balance.
+
+Please let me know if:
+• You are facing any blockers.
+• You need adjustments to your schedule.
+• You need support with current deadlines.
+
+We want to ensure you feel supported. Let's discuss during our next 1:1.${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+  },
+
+  // 📈 Executive & Investor Relations
+  {
+    id: "exec-investor-update-001",
+    subject: "Monthly Investor Update - [Month, Year]",
+    category: "Executive",
+    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Here is the executive summary for [Month]:
+
+KEY METRICS:
+• MRR/ARR: [Amount] (+/- [X]%)
+• Burn Rate: [Amount]
+• Cash in Bank: [Amount] (Runway: [Months])
+
+HIGHLIGHTS:
+• [Major Win 1]
+• [Major Win 2]
+
+LOWLIGHTS/CHALLENGES:
+• [Challenge 1]
+• [Challenge 2]
+
+THE ASK:
+We are looking for introductions to [Target Company/Industry].
+
+Detailed deck attached.${EMAIL_CONSTANTS.FULL_SIGNATURE}`
+  },
+
+  {
+    id: "exec-board-prep-001",
+    subject: "Board Meeting Preparation - Materials Due",
+    category: "Executive",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}The upcoming Board Meeting is scheduled for [Date].
+
+REQUIREMENTS:
+Please update your respective slides in the master deck by [Date/Time].
+
+SECTIONS:
+• Finance: [CFO Name]
+• Sales: [VP Sales Name]
+• Product: [CPO Name]
+• HR: [CHRO Name]
+
+Review session will be held on [Date].${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+  },
+
+  // 🏢 Facilities & Administration
+  {
+    id: "admin-office-closure-001",
+    subject: "Office Closure Notice - [Holiday/Event]",
+    category: "Administration",
+    body: `${EMAIL_CONSTANTS.ALL_STAFF_SALUTATION}Please be advised that the office will be closed for [Holiday/Reason].
+
+CLOSURE DETAILS:
+• Start: [Date] at [Time]
+• Reopen: [Date] at [Time]
+
+OPERATIONS:
+• Physical Office: Locked/No Access
+• Support Team: [On-Call/Unavailable]
+• Systems: Fully Operational
+
+Emergency Contact: [Name/Number]${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}`
+  },
+
+  {
+    id: "admin-lost-found-001",
+    subject: "Lost & Found: [Item Description]",
+    category: "Administration",
+    body: `${EMAIL_CONSTANTS.ALL_STAFF_SALUTATION}An item has been found in [Location e.g., 3rd Floor Pantry].
+
+ITEM DETAILS:
+• Type: [Description]
+• Color/Brand: [Details]
+• Found Date: [Date]
+
+If this belongs to you, please claim it at the Reception Desk by [Date], otherwise it will be disposed of.${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}`
+  },
+
+  // 🚚 Logistics & Supply Chain (Detailed)
+  {
+    id: "logistics-customs-001",
+    subject: "URGENT: Customs Clearance Documents Required - Shipment [ID]",
+    category: "Logistics",
+    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}Shipment [ID] is currently held at customs in [Port/Airport].
+
+MISSING DOCUMENTATION:
+• [ ] Commercial Invoice
+• [ ] Packing List
+• [ ] Certificate of Origin
+• [ ] Import License
+
+DEADLINE:
+Docs must be submitted by [Date/Time] to avoid storage fees and demurrage.
+
+Please reply with attached files immediately.${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  {
+    id: "logistics-receiving-discrepancy-001",
+    subject: "Receiving Discrepancy Report - PO #[Number]",
+    category: "Logistics",
+    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}We have received shipment for PO #[Number] from [Vendor].
+
+DISCREPANCY FOUND:
+• Item: [SKU/Name]
+• Ordered Qty: [Number]
+• Received Qty: [Number]
+• Condition: [Good/Damaged]
+
+Evidence (Photos/BOL) attached. Please advise on credit memo or replacement.${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  // 🔐 Physical Security & Safety
+  {
+    id: "phys-sec-access-001",
+    subject: "Physical Access Badge Request",
+    category: "Security",
+    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Requesting building access badge for:
+
+USER DETAILS:
+• Name: [Name]
+• Employee ID: [ID]
+• Type: [New Issue/Replacement/Temporary]
+
+ZONES REQUIRED:
+• [ ] General Office
+• [ ] Server Room (Approval attached)
+• [ ] Warehouse
+• [ ] Lab
+
+Access Start Date: [Date]${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  {
+    id: "sec-incident-theft-001",
+    subject: "Security Incident Report: Theft/Loss of Property",
+    category: "Security",
+    body: `${EMAIL_CONSTANTS.DEPARTMENT_SALUTATION}Reporting a theft or loss of company property.
+
+INCIDENT DETAILS:
+• Date/Time: [Timestamp]
+• Location: [Place]
+• Item(s) Missing: [Description/Asset Tags]
+• Last Seen: [Time]
+
+Police Report Filed: [Yes/No - Case Number]
+Surveillance Check Requested: [Yes/No]
+
+Detailed statement attached.${EMAIL_CONSTANTS.FULL_SIGNATURE}`
+  },
+
+  // 🔄 Offboarding (Knowledge Transfer)
+  {
+    id: "offboard-kt-001",
+    subject: "Knowledge Transfer Plan - [Leaving Employee]",
+    category: "HR/Offboarding",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}As [Employee] transitions out, here is the Knowledge Transfer (KT) plan.
+
+KT SESSIONS:
+1. [Topic A] - with [Name] - [Date]
+2. [Topic B] - with [Name] - [Date]
+
+DOCUMENTATION:
+• Project Files: [Link]
+• Account Credentials: [Link to Secure Vault]
+• Outstanding Tasks: [Link to Jira/Trello]
+
+Sign-off required by [Manager Name] by [Date].${EMAIL_CONSTANTS.SHORT_SIGNATURE}`
+  },
+
+  // 🤝 Sales: Churn Prevention
+  {
+    id: "sales-risk-alert-001",
+    subject: "⚠️ At-Risk Account Alert: [Client Name]",
+    category: "Sales/Success",
+    body: `${EMAIL_CONSTANTS.TEAM_SALUTATION}This account has been flagged as "At Risk."
+
+RISK FACTORS:
+• Usage Drop: [X]% decrease in last 30 days.
+• Support Tickets: [High volume/Unresolved critical issue].
+• Stakeholder Change: [Key champion left].
+
+RENEWAL DATE: [Date]
+ARR AT RISK: [Amount]
+
+MITIGATION PLAN:
+1. Executive sponsor outreach scheduled for [Date].
+2. Technical review session offered.
+3. Discount/incentive strategy prepared.
+
+Feedback requested.${EMAIL_CONSTANTS.POSITION_SIGNATURE}`
+  },
+
+  // 📞 Customer Service (Specific)
+  {
+    id: "cs-refund-processed-001",
+    subject: "Refund Confirmation - Order #[Order ID]",
+    category: "Customer Service",
+    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}We have processed your refund request for Order #[Order ID].
+
+DETAILS:
+• Refund Amount: [Amount]
+• Payment Method: [Original Method]
+• Reference ID: [Transaction ID]
+
+Please allow 3-5 business days for the funds to appear in your account.
+
+We hope to serve you again in the future.${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}`
+  },
+
+  {
+    id: "cs-apology-gift-001",
+    subject: "Our Apologies: Here is a Gift for You",
+    category: "Customer Service",
+    body: `${EMAIL_CONSTANTS.SHORT_SALUTATION}We are truly sorry for the recent experience you had with [Issue]. This falls short of our standards.
+
+To make amends, please accept this [Discount/Gift Card] for your next order:
+Code: [CODE]
+Value: [Value]
+
+We have taken steps to prevent this from happening again.${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}`
   }
  
 ];
+
 
 
 
