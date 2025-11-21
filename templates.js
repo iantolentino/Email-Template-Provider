@@ -8,7 +8,7 @@ const EMAIL_CONSTANTS = {
    
   // Basic signatures
   SHORT_SIGNATURE: '\n\nRegards,\n[Name]', 
-  POSITION_SIGNATURE: '\n\nRegards,\n[Name]\n[Position]',
+  POSITION_SIGNATURE: '\n\nRegards,\n[Name]\n[Position]', 
   DEPARTMENT_SIGNATURE: '\n\nRegards,\n[Name]\n[Department]',
   FULL_SIGNATURE: '\n\nRegards,\n[Name]\n[Position]\n[Department]\n[Contact Information]',
   EMERGENCY_SIGNATURE: '\n\nEmergency Contact: [Contact Details]\n[Name]\n[Position]'
@@ -5180,6 +5180,7 @@ We have taken steps to prevent this from happening again.${EMAIL_CONSTANTS.DEPAR
   }
  
 ];
+
 
 
 
