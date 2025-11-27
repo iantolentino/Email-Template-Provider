@@ -18,7 +18,7 @@ Designed for support teams and general company use.
 
 - **Copy-Friendly UI**  
   Templates are displayed in clean, ready-to-copy format.
-
+ 
 - **Offline Fallback**  
   Works with local `templates.js` if external data is unavailable.
   External data is always updating to get all the templates that can be usefull for everyone
