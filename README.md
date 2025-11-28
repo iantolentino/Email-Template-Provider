@@ -11,7 +11,7 @@ Designed for support teams and general company use.
   On going: Adding more category for other industry
 
 - **Category & Search Filters**  
-  Quickly find templates by subject, keywords, or category.
+  Quickly find templates by subject, keywords, or category. 
 
 - **Language Support**  
   Switch between English and Japanese (multilingual-ready).
