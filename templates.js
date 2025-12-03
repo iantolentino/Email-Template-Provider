@@ -5177,9 +5177,38 @@ Code: [CODE]
 Value: [Value]
 
 We have taken steps to prevent this from happening again.${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}`
+  },
+  
+  {
+  id: "it-account-remove-001",
+  subject: "Remove Account & Internet Upgrade  [DATE]",
+  category: "Account Removal",
+  body:`${EMAIL_CONSTANTS.SHORT_SALUTATION}
+  
+To JDI Helpdesk,
+
+Good Day!
+
+Kindly see attached file for the following Approval.
+
+LINK - (LINK OF THE FILE FROM ONERIVE)
+
+Remove Account
+First Name - Last Name
+Reason : Employee already Resigned, for deletion of Account.
+
+Internet Upgrade
+First Name - Last name
+Reason: Transferred task from Ms.Madam
+
+If you have any concerns please let us know.
+Thank you for your usual support.
+
+${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}`
   }
  
 ];
+
 
 
 
