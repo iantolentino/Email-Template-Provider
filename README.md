@@ -1,11 +1,11 @@
-# 📧 Email Template Maker
+# Email Template
 
 A lightweight web app to **browse, search, and copy professional email templates** for IT, HR, Finance, Admin, and more.  
 Designed for support teams and general company use. 
  
 ---
 
-## 🚀 Features
+## Features
 - **Preloaded Templates**  
   Includes IT support, HR, Finance, Admin, Operations, Security, and more categories.
   On going: Adding more category for other industry
@@ -24,7 +24,7 @@ Designed for support teams and general company use.
   External data is always updating to get all the templates that can be usefull for everyone
 ---
 
-## 📂 Project Structure
+## Project Structure
 ```
 
 email-template-maker/
@@ -38,7 +38,7 @@ email-template-maker/
 
 ---
 
-## 🖥️ Getting Started
+## Getting Started
 
 ### 1. Clone the repo
 ```bash
@@ -53,7 +53,7 @@ No backend or installation required.
 
 ---
 
-## ✨ Example Categories
+## Example Categories
 
 * **Support:** Ticket acknowledgement, system outage, remote assistance.
 * **IT:** Hardware assessment, replacement reports, network failures.
@@ -64,19 +64,12 @@ No backend or installation required.
 
 ---
 
-## 🧭 Roadmap
+## Roadmap
 
 * [ ] Add more language options (e.g., French, Spanish).
 * [ ] Export templates as `.docx` or `.pdf`.
 * [ ] User customization & template editor.
-* [ ] Dark mode support.
+* [ ] Light mode support.
 
 ---
-
-## 📜 License
-
-MIT – free to use and adapt.
-
----
-
-👨‍💻 Built for productivity: one-click access to ready-made company emails.
+ Built for productivity: one-click access to ready-made company emails.
