@@ -1,9 +1,0 @@
-[
-  {
-    "id": "mfg-qc-001",
-    "subject": "Quality Control Alert – [Product Line]",
-    "category": "Manufacturing",
-    "body": "Dear [Department] Team,\n\nPlease be advised of a quality control issue identified in [Product Line].\n\nInspection Summary:\n• Issue(s) Detected:\n• Immediate Action Required:\n• Corrective Measures Planned:\n\nKindly acknowledge receipt and confirm action.\n\nRegards,\n[Name]\n[Position]\n\nBest regards.",
-    "tags": ["quality", "control", "inspection", "alert"]
-  }
-]

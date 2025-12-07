@@ -1,9 +1,0 @@
-[
-  {
-    "id": "fin-compliance-001",
-    "subject": "Regulatory Compliance Report - [Quarter]",
-    "category": "Financial",
-    "body": "Dear [Department] Team,\n\nCompliance update for [Quarter], [Year]:\n\nOverview:\n• Audits: [#]\n• Issues: [#]\n• Resolution Rate: [%]\n\nKey Findings:\n1. [Finding 1]\n2. [Finding 2]\n\nRisk & Mitigation:\n• High-Risk Areas: [List]\n• Actions: [Plan]\n\nRecommendations:\n• Policy/Training/System updates as needed.\n\nRegards,\n[Name]\n[Position]\n\nBest regards.",
-    "tags": ["compliance", "regulatory", "finance", "report"]
-  }
-]
