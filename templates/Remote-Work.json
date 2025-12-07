@@ -1,0 +1,30 @@
+[
+  {
+    "id": "remote-request-001",
+    "subject": "Remote Work Request - [Start Date]",
+    "category": "Remote Work",
+    "body": "Dear [Name],\n\nI would like to request remote work arrangements:\n\nREQUEST DETAILS:\n• Duration: [Temporary/Permanent]\n• Start Date: [Date]\n• End Date: [If Temporary]\n• Work Hours: [Time Zone & Hours]\n\nEQUIPMENT NEEDS:\n• Hardware: [List Required]\n• Software: [List Required]\n• Network: [VPN/Special Access]\n\nWORK PLAN:\n• Daily Tasks: [Key Responsibilities]\n• Communication: [Tools & Schedule]\n• Team Meetings: [Regular Times]\n\nJUSTIFICATION:\n[Brief Explanation]\n\nManager: [Name]\n\nRegards,\n[Name]\n[Position]\n[Department]\n[Contact Information]\n\nBest regards.",
+    "tags": ["remote", "work", "request", "arrangement"]
+  },
+  {
+    "id": "remote-setup-001",
+    "subject": "Remote Workspace Setup Verification",
+    "category": "Remote Work",
+    "body": "Dear [Name],\n\nPlease confirm your remote workspace setup:\n\nWORKSPACE CHECKLIST:\n• Dedicated Work Area: [Yes/No]\n• Ergonomic Setup: [Yes/No]\n• Adequate Lighting: [Yes/No]\n• Internet Speed: [Mbps]\n\nEQUIPMENT STATUS:\n• Computer: [Model/Specs]\n• Monitor: [Size/Resolution]\n• Peripherals: [List]\n• Software: [Installed/Needed]\n\nNETWORK SETUP:\n• Internet Provider: [Name]\n• Backup Connection: [Available/None]\n• VPN Tested: [Yes/No]\n• Video Call Quality: [Good/Issues]\n\nSECURITY MEASURES:\n• Secure WiFi: [Yes/No]\n• Password Policy: [Confirmed]\n• Data Protection: [Measures]\n\nAny issues or needs:\n\nRegards,\n[Name]\n[Position]\n[Department]\n[Contact Information]\n\nBest regards.",
+    "tags": ["remote", "workspace", "setup", "verification"]
+  },
+  {
+    "id": "virtual-meeting-001",
+    "subject": "Virtual Team Meeting - [Topic]",
+    "category": "Remote Work",
+    "body": "Dear Team,\n\nDetails for our upcoming virtual team meeting:\n\nMEETING INFO:\n• Date: [Date]\n• Time: [Time with TimeZone]\n• Duration: [Length]\n• Platform: [Tool Name]\n\nACCESS DETAILS:\n• Link: [Meeting URL]\n• Meeting ID: [ID]\n• Password: [If Required]\n• Dial-in: [Numbers]\n\nAGENDA:\n1. [Topic 1] - [Duration]\n2. [Topic 2] - [Duration]\n3. [Topic 3] - [Duration]\n\nPREPARATION:\n• Review: [Documents]\n• Prepare: [Requirements]\n• Test: [Tech Check]\n\nNotes:\n- Please join 5 minutes early\n- Keep microphone muted when not speaking\n- Use headphones if possible\n\nRegards,\n[Name]\n[Position]\n\nBest regards.",
+    "tags": ["virtual", "meeting", "remote", "team"]
+  },
+  {
+    "id": "remote-issue-001",
+    "subject": "Remote Work Technical Issue Report",
+    "category": "Remote Work",
+    "body": "Dear [Department] Team,\n\nI am experiencing technical issues while working remotely:\n\nISSUE DETAILS:\n• Type: [Connection/Hardware/Software]\n• Started: [Time/Date]\n• Frequency: [Constant/Intermittent]\n• Impact: [Work Effect]\n\nTROUBLESHOOTING DONE:\n• Steps Taken: [List Actions]\n• Results: [Outcomes]\n• Current Status: [State]\n\nSYSTEM INFO:\n• Device: [Details]\n• Software: [Versions]\n• Connection: [Speed/Type]\n\nURGENCY:\n[Impact Level]\n\nAvailable for troubleshooting:\n\nRegards,\n[Name]\n[Position]\n[Department]\n[Contact Information]\n\nBest regards.",
+    "tags": ["remote", "technical", "issue", "support"]
+  }
+]

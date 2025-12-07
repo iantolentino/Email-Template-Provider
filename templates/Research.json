@@ -1,0 +1,9 @@
+[
+  {
+    "id": "lab-experiment-001",
+    "subject": "Experiment Report - [Project ID]",
+    "category": "Research",
+    "body": "Dear [Department] Team,\n\nSummary of experiment results:\n\nProject: [ID] | Date: [Date] | Researcher: [Name] | Lab: [Location]\n\nMethod:\nResults:\nData Stored At:\nConclusion:\n• Key Outcomes: [Summary]\n• Next Steps: [Action]\n\nRegards,\n[Name]\n[Position]\n\nBest regards.",
+    "tags": ["research", "experiment", "lab", "report"]
+  }
+]

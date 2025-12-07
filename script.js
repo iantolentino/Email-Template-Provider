@@ -1,305 +1,381 @@
-// script.js
-// Uses templates.js for predefined email templates
-// Supports English/Japanese translation
-// Shows consistent card sizes, modal with full email & navigation, template count
+// script.js - Main application logic for Email Template Maker
+
+// Global variables
+let allTemplates = [];
+let currentFilter = 'All';
+let currentSearch = '';
+
+// DOM Elements
+const categorySelect = document.getElementById('category');
+const searchInput = document.getElementById('search');
+const templateCount = document.getElementById('template-count');
+const templateGrid = document.getElementById('list');
+const loadingSection = document.getElementById('loading');
+const progressBar = document.getElementById('progress-bar');
+const progressText = document.getElementById('progress-text');
+const loadingMsg = document.getElementById('loading-msg');
+
+// Initialize application
+async function initApp() {
+  console.log('Initializing application...');
   
-const TRANSLATE_URL = "https://translate.argosopentech.com/translate";
-
-let templates = [];
-let displayed = [];
-let targetLang = "en"; // default language
-
-// UI elements
-const listEl = document.getElementById("list");
-const categorySel = document.getElementById("category");
-const searchInput = document.getElementById("search");
-const langSelect = document.getElementById("lang-select");
-const progressBar = () => document.getElementById("progress-bar");
-const progressText = () => document.getElementById("progress-text");
-const loadingSection = document.getElementById("loading");
-
-// Modal state
-let modalIndex = -1;
-let modalEl = null;
-let modalContentEl = null;
-let modalPrevBtn = null;
-let modalNextBtn = null;
-let modalCloseBtn = null;
-let modalCopyBtn = null;
-
-// Ensure the template count UI exists
-function ensureCountDisplay() {
-  if (!document.getElementById("template-count")) {
-    const wrapper = document.createElement("div");
-    wrapper.className = "count-display";
-    wrapper.innerHTML = `<label>Total Templates: <span id="template-count">0</span></label>`;
-    if (searchInput && searchInput.parentNode) {
-      searchInput.parentNode.insertBefore(wrapper, searchInput);
-    } else {
-      const wrap = document.querySelector(".wrap") || document.body;
-      wrap.insertBefore(wrapper, wrap.firstChild);
-    }
-  }
-}
-ensureCountDisplay();
-
-// Force-translate helper
-async function translateTextForce(text, lang = "en") {
-  if (!text) return "";
   try {
-    const res = await fetch(TRANSLATE_URL, {
-      method: "POST",
-      body: JSON.stringify({
-        q: text,
-        source: "auto",
-        target: lang,
-        format: "text"
-      }),
-      headers: { "Content-Type": "application/json" }
-    });
-    const data = await res.json();
-    return data.translatedText || text;
-  } catch (err) {
-    console.error("Translation failed:", err);
-    return text;
-  }
-}
-
-// Populate categories
-function populateCategories() {
-  const set = new Set(["All"]);
-  templates.forEach(t => set.add(t.category || "General"));
-  categorySel.innerHTML = "";
-  Array.from(set).forEach(cat => {
-    const opt = document.createElement("option");
-    opt.value = cat;
-    opt.text = cat;
-    categorySel.appendChild(opt);
-  });
-}
-
-// Escape HTML
-function escapeHtml(str) {
-  return String(str || "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-}
-
-// Create a card (full details inside, scrollable if long)
-function createCard(t, idx) {
-  const card = document.createElement("article");
-  card.className = "card";
-
-  card.innerHTML = `
-    <h3>${escapeHtml(t.subject)}</h3>
-    <div class="badge">${escapeHtml(t.category || "General")}</div>
-    <div class="card-preview">
-      <pre class="preview-body">${escapeHtml(t.body)}</pre>
-    </div>
-    <div class="copy-icon" title="Copy">🗐</div>
-  `;
-
-  // Open modal
-  card.addEventListener("click", (e) => {
-    if (e.target.closest(".copy-icon")) return;
-    openModalByIndex(idx);
-  });
-
-  // Copy button
-const copyBtn = card.querySelector(".copy-icon");
-copyBtn.addEventListener("click", async (e) => {
-  e.stopPropagation();
-  const btn = e.currentTarget;
-  const full = `${t.subject}\n\n${t.body}`; // ✅ define full text here
-  try {
-    await navigator.clipboard.writeText(full);
-    btn.textContent = "✓ Copied";
-    btn.classList.add("copied");
+    // Show loading indicator
+    showLoading(true);
+    updateProgress(10, 'Starting application...');
+    
+    // Load templates
+    await loadTemplates();
+    
+    // Setup UI components
+    await setupUI();
+    
+    // Setup event listeners
+    setupEventListeners();
+    
+    // Initial display
+    displayTemplates();
+    
+    // Hide loading indicator
+    showLoading(false);
+    
+    console.log('Application initialized successfully');
+    
+  } catch (error) {
+    console.error('Failed to initialize application:', error);
+    loadingMsg.textContent = `Error: ${error.message}`;
+    loadingMsg.style.color = '#dc2626';
+    
+    // Show error state
     setTimeout(() => {
-      btn.textContent = "🗐";
-      btn.classList.remove("copied");
+      showLoading(false);
+      templateGrid.innerHTML = `
+        <div class="empty-state error-state">
+          <h3>Failed to Load Templates</h3>
+          <p>Error: ${error.message}</p>
+          <button onclick="location.reload()" class="btn-retry">Retry Loading</button>
+        </div>
+      `;
     }, 2000);
-  } catch (err) {
-    console.error("Copy failed:", err);
-    alert("Copy failed. Please copy manually.");
   }
-});
+}
 
+// Load templates from JSON files
+async function loadTemplates() {
+  try {
+    updateProgress(20, 'Loading template categories...');
+    
+    // Load templates using the function from templates.js
+    allTemplates = await window.loadAllTemplates();
+    
+    if (!allTemplates || allTemplates.length === 0) {
+      throw new Error('No templates were loaded. Check your JSON files.');
+    }
+    
+    updateProgress(100, `Successfully loaded ${allTemplates.length} templates!`);
+    templateCount.textContent = allTemplates.length;
+    
+    console.log(`Loaded ${allTemplates.length} templates`);
+    
+  } catch (error) {
+    console.error('Error loading templates:', error);
+    loadingMsg.textContent = 'Error loading templates. Using fallback data.';
+    
+    // Try to use fallback templates
+    allTemplates = window.customTemplates || window.FALLBACK_TEMPLATES || [];
+    
+    if (allTemplates.length === 0) {
+      throw new Error('Could not load any templates');
+    }
+    
+    templateCount.textContent = allTemplates.length;
+  }
+}
 
+// Setup UI components
+async function setupUI() {
+  updateProgress(30, 'Setting up UI...');
+  
+  // Load categories into dropdown
+  const categories = window.getAvailableCategories ? window.getAvailableCategories() : ['All', 'IT', 'Support'];
+  
+  // Clear existing options
+  categorySelect.innerHTML = '';
+  
+  // Add categories to dropdown
+  categories.forEach(category => {
+    const option = document.createElement('option');
+    option.value = category;
+    option.textContent = category;
+    categorySelect.appendChild(option);
+  });
+  
+  updateProgress(50, 'UI setup complete');
+}
+
+// Setup event listeners
+function setupEventListeners() {
+  // Category filter
+  categorySelect.addEventListener('change', (e) => {
+    currentFilter = e.target.value;
+    console.log(`Category filter changed to: ${currentFilter}`);
+    displayTemplates();
+  });
+  
+  // Search input with debounce
+  let searchTimeout;
+  searchInput.addEventListener('input', (e) => {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+      currentSearch = e.target.value.trim();
+      console.log(`Search query: ${currentSearch}`);
+      displayTemplates();
+    }, 300);
+  });
+  
+  // Quick search on Enter key
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      currentSearch = e.target.value.trim();
+      displayTemplates();
+    }
+  });
+}
+
+// Display templates in the grid
+function displayTemplates() {
+  console.log('Displaying templates...');
+  
+  // Get filtered templates
+  let filteredTemplates = allTemplates;
+  
+  // Apply category filter
+  if (currentFilter !== 'All') {
+    filteredTemplates = window.getTemplatesByCategory(currentFilter);
+  }
+  
+  // Apply search filter
+  if (currentSearch) {
+    filteredTemplates = window.searchTemplates(currentSearch);
+  }
+  
+  // Update count
+  const count = filteredTemplates ? filteredTemplates.length : 0;
+  templateCount.textContent = count;
+  console.log(`Displaying ${count} templates`);
+  
+  // Clear current grid
+  templateGrid.innerHTML = '';
+  
+  // Display each template
+  if (filteredTemplates && filteredTemplates.length > 0) {
+    filteredTemplates.forEach(template => {
+      const templateCard = createTemplateCard(template);
+      templateGrid.appendChild(templateCard);
+    });
+  } else {
+    // Show empty state
+    templateGrid.innerHTML = `
+      <div class="empty-state">
+        <h3>No Templates Found</h3>
+        <p>${currentSearch ? `No results for "${currentSearch}"` : 'No templates available for this category'}</p>
+        ${currentSearch ? '<button onclick="clearSearch()" class="btn-clear">Clear Search</button>' : ''}
+      </div>
+    `;
+  }
+}
+
+// Create a template card element
+function createTemplateCard(template) {
+  const card = document.createElement('div');
+  card.className = 'template-card';
+  card.dataset.id = template.id;
+  card.dataset.category = template.category;
+  
+  // Truncate body for preview
+  const previewBody = template.body.length > 200 
+    ? template.body.substring(0, 200) + '...' 
+    : template.body;
+  
+  // Escape HTML for safe display
+  const safeSubject = escapeHtml(template.subject);
+  const safeBody = escapeHtml(previewBody);
+  const safeCategory = escapeHtml(template.category);
+  
+  card.innerHTML = `
+    <div class="template-card-header">
+      <span class="template-category">${safeCategory}</span>
+      <span class="template-id">${template.id}</span>
+    </div>
+    <div class="template-card-body">
+      <h3 class="template-subject">${safeSubject}</h3>
+      <p class="template-body-preview">${safeBody}</p>
+    </div>
+    <div class="template-card-footer">
+      <button class="btn-preview" data-id="${template.id}">Preview</button>
+      <button class="btn-copy" data-id="${template.id}">Copy</button>
+      <button class="btn-use" data-id="${template.id}">Use Template</button>
+    </div>
+  `;
+  
+  // Add event listeners to buttons
+  const previewBtn = card.querySelector('.btn-preview');
+  const copyBtn = card.querySelector('.btn-copy');
+  const useBtn = card.querySelector('.btn-use');
+  
+  previewBtn.addEventListener('click', () => previewTemplate(template.id));
+  copyBtn.addEventListener('click', () => copyTemplate(template.id));
+  useBtn.addEventListener('click', () => useTemplate(template.id));
+  
   return card;
 }
 
-// Update template count
-function updateCount() {
-  const countEl = document.getElementById("template-count");
-  if (countEl) {
-    const total = templates.length || 0;
-    const shown = displayed.length || 0;
-    countEl.textContent = `${shown} / ${total}`;
-  }
+// Helper function to escape HTML
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
 }
 
-// Render list
-function renderList(filterCategory = "All", search = "") {
-  listEl.innerHTML = "";
-  const q = (search || "").toLowerCase();
-  displayed = templates.filter(t => {
-    if (filterCategory !== "All" && t.category !== filterCategory) return false;
-    if (!q) return true;
-    return (t.subject + " " + t.body + " " + (t.category || "")).toLowerCase().includes(q);
-  });
-
-  updateCount();
-
-  if (displayed.length === 0) {
-    listEl.innerHTML = `<p>${targetLang === "en" ? "No templates found." : "テンプレートが見つかりません。"}</p>`;
-    return;
-  }
-
-  displayed.forEach((t, i) => {
-    const card = createCard(t, i);
-    listEl.appendChild(card);
-  });
-}
-
-// Modal setup
-function ensureModal() {
-  if (modalEl) return;
-
-  modalEl = document.createElement("div");
-  modalEl.id = "template-modal";
-  modalEl.className = "modal";
-  modalEl.innerHTML = `
-    <div class="modal-box" role="dialog" aria-modal="true">
-      <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
-      <div id="modal-content" class="modal-content"></div>
-      <div class="modal-actions">
-        <button id="modal-prev" class="modal-nav"> ← </button>
-        <button id="modal-copy" class="modal-copy">Copy</button>
-        <button id="modal-next" class="modal-nav"> → </button>
+// Preview a template
+function previewTemplate(templateId) {
+  const template = allTemplates.find(t => t.id === templateId);
+  if (template) {
+    // Create preview modal
+    const modal = document.createElement('div');
+    modal.className = 'preview-modal';
+    modal.innerHTML = `
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>${escapeHtml(template.subject)}</h2>
+          <span class="modal-close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="template-category-badge">${escapeHtml(template.category)}</div>
+          <div class="template-id-label">ID: ${template.id}</div>
+          <pre class="template-full-body">${escapeHtml(template.body)}</pre>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-copy-full">Copy Full Template</button>
+          <button class="btn-close-modal">Close</button>
+        </div>
       </div>
-    </div>
-  `;
-  document.body.appendChild(modalEl);
-
-  modalContentEl = modalEl.querySelector("#modal-content");
-  modalPrevBtn = modalEl.querySelector("#modal-prev");
-  modalNextBtn = modalEl.querySelector("#modal-next");
-  modalCloseBtn = modalEl.querySelector("#modal-close");
-  modalCopyBtn = modalEl.querySelector("#modal-copy");
-
-  modalCloseBtn.addEventListener("click", closeModal);
-  modalPrevBtn.addEventListener("click", showPrevModal);
-  modalNextBtn.addEventListener("click", showNextModal);
-  modalCopyBtn.addEventListener("click", async () => {
-  if (modalIndex < 0 || !displayed[modalIndex]) return;
-  const t = displayed[modalIndex];
-  const full = `${t.subject}\n\n${t.body}`; // ✅ define full text here
-  try {
-    await navigator.clipboard.writeText(full);
-    modalCopyBtn.textContent = "✓ Copied";
-    setTimeout(() => (modalCopyBtn.textContent = "Copy"), 2000);
-  } catch (err) {
-    console.error("Copy failed in modal:", err);
-    alert("Copy failed. Please copy manually.");
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Add event listeners
+    const closeBtn = modal.querySelector('.modal-close');
+    const closeModalBtn = modal.querySelector('.btn-close-modal');
+    const copyFullBtn = modal.querySelector('.btn-copy-full');
+    
+    closeBtn.addEventListener('click', () => modal.remove());
+    closeModalBtn.addEventListener('click', () => modal.remove());
+    copyFullBtn.addEventListener('click', () => {
+      copyTemplate(templateId);
+      modal.remove();
+    });
+    
+    // Close on background click
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.remove();
+      }
+    });
   }
+}
+
+// Copy template to clipboard
+async function copyTemplate(templateId) {
+  const template = allTemplates.find(t => t.id === templateId);
+  if (template) {
+    try {
+      await navigator.clipboard.writeText(template.body);
+      showNotification('Template copied to clipboard!', 'success');
+    } catch (error) {
+      console.error('Failed to copy:', error);
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = template.body;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      showNotification('Template copied to clipboard!', 'success');
+    }
+  }
+}
+
+// Use template (opens in email client)
+function useTemplate(templateId) {
+  const template = allTemplates.find(t => t.id === templateId);
+  if (template) {
+    // Create mailto link with template content
+    const subject = encodeURIComponent(template.subject);
+    const body = encodeURIComponent(template.body);
+    const mailtoLink = `mailto:?subject=${subject}&body=${body}`;
+    
+    // Open in new tab/window
+    window.open(mailtoLink, '_blank');
+  }
+}
+
+// Show notification
+function showNotification(message, type = 'success') {
+  // Remove existing notifications
+  const existingNotifications = document.querySelectorAll('.notification');
+  existingNotifications.forEach(n => n.remove());
+  
+  // Create notification element
+  const notification = document.createElement('div');
+  notification.className = `notification notification-${type}`;
+  notification.textContent = message;
+  
+  document.body.appendChild(notification);
+  
+  // Remove after 3 seconds
+  setTimeout(() => {
+    notification.remove();
+  }, 3000);
+}
+
+// Clear search function
+window.clearSearch = function() {
+  searchInput.value = '';
+  currentSearch = '';
+  displayTemplates();
+};
+
+// Update loading progress
+function updateProgress(percentage, message = '') {
+  if (progressBar) {
+    progressBar.style.width = `${percentage}%`;
+  }
+  if (progressText) {
+    progressText.textContent = `Loading… ${Math.round(percentage)}%`;
+  }
+  if (loadingMsg && message) {
+    loadingMsg.textContent = message;
+  }
+}
+
+// Show/hide loading indicator
+function showLoading(show) {
+  if (loadingSection) {
+    loadingSection.style.display = show ? 'block' : 'none';
+  }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM loaded, initializing app...');
+  // Small delay to ensure everything is ready
+  setTimeout(initApp, 100);
 });
 
-
-  modalEl.addEventListener("click", (e) => {
-    if (e.target === modalEl) closeModal();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (!modalEl || modalEl.style.display !== "flex") return;
-    if (e.key === "Escape") closeModal();
-    if (e.key === "ArrowRight") showNextModal();
-    if (e.key === "ArrowLeft") showPrevModal();
-  });
+// Also initialize if DOM is already loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  setTimeout(initApp, 100);
 }
-
-// Modal navigation
-function openModalByIndex(index) {
-  if (index < 0 || index >= displayed.length) return;
-  ensureModal();
-  modalIndex = index;
-  showModal();
-  modalEl.style.display = "flex";
-}
-
-function showModal() {
-  if (modalIndex < 0 || modalIndex >= displayed.length) return;
-  const t = displayed[modalIndex];
-  modalContentEl.innerHTML = `
-    <h2>${escapeHtml(t.subject)}</h2>
-    <div class="badge">${escapeHtml(t.category || "General")}</div>
-    <div class="modal-body">
-      <pre class="full-body">${escapeHtml(t.body)}</pre>
-    </div>
-  `;
-  modalPrevBtn.disabled = modalIndex <= 0;
-  modalNextBtn.disabled = modalIndex >= (displayed.length - 1);
-  modalCopyBtn.textContent = "Copy";
-}
-
-function showPrevModal() {
-  if (modalIndex > 0) {
-    modalIndex--;
-    showModal();
-  }
-}
-function showNextModal() {
-  if (modalIndex < displayed.length - 1) {
-    modalIndex++;
-    showModal();
-  }
-}
-function closeModal() {
-  if (!modalEl) return;
-  modalEl.style.display = "none";
-  modalIndex = -1;
-}
-
-// Load templates
-async function fetchTemplates() {
-  loadingSection.style.display = "block";
-  if (progressBar()) progressBar().style.width = "0%";
-  if (progressText()) progressText().textContent =
-    targetLang === "en" ? "Loading templates…" : "テンプレートを読み込み中…";
-
-  try {
-    templates = await Promise.all(customTemplates.map(async t => {
-      const subject = await translateTextForce(t.subject, targetLang);
-      const body = await translateTextForce(t.body, targetLang);
-      return { ...t, subject, body };
-    }));
-
-    if (progressBar()) progressBar().style.width = "100%";
-    if (progressText()) progressText().textContent =
-      targetLang === "en" ? "Done" : "完了";
-    loadingSection.style.display = "none";
-  } catch (err) {
-    console.error("Failed to load templates:", err);
-    templates = [...customTemplates];
-    loadingSection.style.display = "none";
-  }
-
-  populateCategories();
-  renderList();
-}
-
-// Events
-categorySel.addEventListener("change", () => renderList(categorySel.value, searchInput.value));
-searchInput.addEventListener("input", () => renderList(categorySel.value, searchInput.value));
-langSelect.addEventListener("change", () => {
-  targetLang = langSelect.value;
-  fetchTemplates();
-});
-
-// Run
-fetchTemplates();
-
-

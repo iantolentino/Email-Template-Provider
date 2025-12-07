@@ -1,0 +1,37 @@
+[
+  {
+    "id": "hw-assessment-001",
+    "subject": "Hardware Assessment Report - [Device Type]",
+    "category": "Hardware Management",
+    "body": "Dear [Stakeholder],\n\nDevice: [Type/Model/SN] | Brand: [Manufacturer] | Warranty: [Status]\n\nSpecs: CPU [ ] | RAM [ ] | Storage [ ] | Power [ ]\n\nStatus: [Summary]\n\nRecommendations: [ ]\n\nCompliance/Risk: [ ]\n\nCost: Parts [ ] | Labor [ ] | Maintenance [ ]\n\nNext Steps: [ ]\n\nAssessed By: [Name] | Date: [Date]",
+    "tags": ["hardware", "assessment", "device", "report"]
+  },
+  {
+    "id": "hw-assessment-short-001",
+    "subject": "Quick Hardware Assessment - [Device Type]",
+    "category": "Hardware Management",
+    "body": "Dear [Name],\n\nHardware status for [Device]:\n\nModel: [ ] | Serial: [ ] | Asset: [ ]\n\nFindings: [ ]\nPriority: [ ]\n\nActions Required: [ ]\nTimeline: [ ]\n\nRegards,\n[Name]\n\nBest regards.",
+    "tags": ["hardware", "quick", "assessment", "brief"]
+  },
+  {
+    "id": "hw-repair-short-001",
+    "subject": "Repair Report - [Device Type]",
+    "category": "Hardware Management",
+    "body": "Dear [Name],\n\nRepair completed for [Device]:\n\nAsset: [ ] | Location: [ ]\n\nIssue: [ ]\nFix Applied: [ ]\nParts Used: [ ]\n\nStatus: [ ]\nNext Steps: [ ]\n\nRegards,\n[Name]\n\nBest regards.",
+    "tags": ["hardware", "repair", "fix", "maintenance"]
+  },
+  {
+    "id": "hw-replacement-001",
+    "subject": "Hardware Replacement Request - [Device Type] - [Location]",
+    "category": "Hardware Management",
+    "body": "Dear [IT Manager/Procurement Team],\n\nThis is a formal request for hardware replacement based on our recent assessment.\n\nDEVICE DETAILS:\nType: [Device Type]\nManufacturer: [Brand]\nModel: [Model Number]\nSerial Number: [S/N]\nAsset Tag: [Company Asset ID]\nPurchase Date: [Date]\nWarranty Status: [In/Out of Warranty]\nLocation: [Building/Floor/Department]\nUser: [Employee Name/ID]\n\nCURRENT SPECIFICATIONS:\n• Processor: [CPU Details]\n• Memory: [RAM Details]\n• Storage: [Storage Details]\n• Other Components: [Relevant Specs]\n\nISSUE ASSESSMENT:\n• Primary Issue: [Brief Description]\n• Diagnostic Results: [Test Findings]\n• Performance Metrics: [Relevant Data]\n• Impact Level: [High/Medium/Low]\n\nREPLACEMENT JUSTIFICATION:\n1. [Technical Reason]\n2. [Business Impact]\n3. [Cost Implications]\n\nREQUESTED SPECIFICATIONS:\n• Recommended Model: [New Device Model]\n• Estimated Cost: [Amount]\n• Priority Level: [Urgent/Normal/Low]\n• Required Features: [List Key Requirements]\n\nPROCUREMENT DETAILS:\nCost Center: [Code]\nBudget Category: [Category]\nPreferred Vendor: [If Any]\nQuotation Reference: [If Available]\n\nTIMELINE:\n• Request Date: [Current Date]\n• Required By: [Target Date]\n• Business Justification: [Explain Urgency if Applicable]\n\nADDITIONAL NOTES:\n• Data Migration Required: [Yes/No]\n• Special Requirements: [Any Specific Needs]\n• User Downtime Plan: [Mitigation Strategy]\n\nAPPROVALS REQUIRED:\n1. Department Head: [Name]\n2. IT Manager: [Name]\n3. Finance (if above [threshold]): [Name]\n\nPlease review and provide your approval for this replacement request.\n\nBest regards,\n[Name]\n[Position]\n[Department]\n[Contact Information]\n\nAttachments:\n1. Assessment Report\n2. Cost Analysis\n3. Vendor Quotations\n4. Performance Logs",
+    "tags": ["hardware", "replacement", "request", "procurement"]
+  },
+  {
+    "id": "eol-notice-001",
+    "subject": "End-of-Life Notice – [Device/Model]",
+    "category": "Hardware Management",
+    "body": "Dear [Department] Team,\n\nThis is notice that [Device/Model] has reached End of Life (EOL) as of [Date].\n\nIMPACT:\n• Affected Units: [Count/Locations]\n• Risk: [Security/Support/Performance]\n\nRECOMMENDATION:\n• Replace by: [Target Date]\n• Suggested models: [Options]\n• Data migration required: [Yes/No]\n\nPlease advise if there are business constraints to the replacement schedule.\n\nRegards,\n[Name]\n[Position]",
+    "tags": ["hardware", "end-of-life", "replacement", "notice"]
+  }
+]

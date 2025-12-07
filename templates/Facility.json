@@ -1,0 +1,9 @@
+[
+  {
+    "id": "fac-maintenance-001",
+    "subject": "Facility Maintenance Request - [Location]",
+    "category": "Facility",
+    "body": "Dear [Department] Team,\n\nPlease address the following maintenance request:\n\nLocation: [Building], Floor [#], Room [Area]\nAccess: [Requirements]\n\nMaintenance: [Category] | Priority: [Urgent/Normal] | Impact: [# Affected]\n\nIssue: [Brief Description] | Duration: [Timeframe] | Safety: [Yes/No]\n\nSchedule: [Requested Date] | During Business Hours: [Yes/No] | Coordination: [Departments]\n\nContact: [Name, Dept, Phone/Ext]\n\nRegards,",
+    "tags": ["facility", "maintenance", "request", "building"]
+  }
+]

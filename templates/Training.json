@@ -1,0 +1,9 @@
+[
+  {
+    "id": "training-short-001",
+    "subject": "Training Feedback Brief",
+    "category": "Training",
+    "body": "Dear [Name],\n\nFeedback for [Training Name]:\n\nATTENDANCE: [Number]\nRATING: [X/5]\n\nKEY FEEDBACK:\n• [Positive Point]\n• [Area for Improvement]\n\nSuggestions: [Brief Notes]\n\nRegards,\n[Name]\n\nBest regards.",
+    "tags": ["training", "feedback", "brief", "education"]
+  }
+]

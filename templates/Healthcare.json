@@ -1,0 +1,9 @@
+[
+  {
+    "id": "health-equip-001",
+    "subject": "Medical Equipment Maintenance Report",
+    "category": "Healthcare",
+    "body": "Dear [Department] Team,\n\nMaintenance update for the following equipment:\n\nDevice: [Name] | S/N: [Number] | Dept: [Location] | Certification: [Standard]\n\nService Performed:\n• Type: [Routine/Emergency]\n• Tasks: [Summary]\n• Parts Replaced: [If any]\n• Calibration Result: [Status]\n\nCompliance Status:\nRequired Action: [If any]\n\nRegards,\n[Name]\n[Position]\n\nBest regards.",
+    "tags": ["medical", "equipment", "maintenance", "healthcare"]
+  }
+]

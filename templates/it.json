@@ -1,0 +1,16 @@
+[
+  {
+    "id": "it-test-001",
+    "subject": "Test IT Template - System Check",
+    "category": "IT",
+    "body": "Dear Team,\n\nThis is a test template to verify the system is working properly.\n\nPlease confirm receipt.\n\nRegards,\n[Name]\n[Position]",
+    "tags": ["test", "it", "system", "verification"]
+  },
+  {
+    "id": "it-test-002",
+    "subject": "IT Maintenance Notification",
+    "category": "IT",
+    "body": "Dear All,\n\nScheduled maintenance will occur on [Date] from [Time] to [Time].\n\nSystems affected: [List]\n\nPlease save your work before the maintenance window.\n\nRegards,\nIT Department",
+    "tags": ["maintenance", "it", "notification", "schedule"]
+  }
+]
