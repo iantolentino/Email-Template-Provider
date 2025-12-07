@@ -1,113 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Character encoding and responsive viewport settings -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  
-  <!-- Page title displayed in browser tab -->
   <title>Email Template Maker</title>
-  
-  <!-- External CSS file for styling -->
   <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="assets/document.png"> -->
   
-  <!-- Note: Favicon is dynamically generated via JavaScript at bottom of file -->
 </head>
 <body>
-  <!-- Header section with application branding -->
   <header class="topbar">
-    <div class="logo">
-      📧 <span class="brand">Email Template Maker</span>
-    </div>
+    <div class="logo">📧 <span class="brand">Email Template Maker</span></div>
   </header>
 
-  <!-- Main content container -->
   <main class="wrap">
-    <!-- Control panel for filtering and searching templates -->
     <section class="controls-row">
-      <!-- Left controls: Category filter -->
       <div class="left-controls">
         <label for="category">Category</label>
-        <!-- Category dropdown populated by JavaScript -->
-        <select id="category">
-          <option value="All">All</option>
-          <!-- Additional options will be added dynamically -->
-        </select>
+        <select id="category"><option value="All">All</option></select>
       </div>
-      
-      <!-- Right controls: Search and template count -->
+      <select id="lang-select">
+  <option value="en">English</option>
+  <option value="ja">日本語</option>
+</select>
+
+
       <div class="right-controls">
-        <!-- Template counter displaying total number of templates -->
         <label>Total Templates: <span id="template-count">0</span></label>
-        
-        <!-- Search input for filtering templates -->
         <label for="search">Search</label>
-        <input 
-          id="search" 
-          placeholder="Search by subject, body or keyword (e.g. battery assessment)" 
-          aria-label="Search email templates"
-        />
+        <input id="search" placeholder="Search by subject, body or keyword (e.g. battery assessment)" />
       </div>
     </section>
 
-    <!-- Loading indicator section (initially visible, hidden when data loads) -->
     <section id="loading" class="loading">
-      <!-- Progress bar container -->
-      <div class="progress-track">
-        <!-- Dynamic progress bar that fills as data loads -->
-        <div id="progress-bar" class="progress-bar"></div>
-      </div>
-      
-      <!-- Text displaying percentage loaded -->
+      <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
       <div id="progress-text" class="progress-text">Loading… 0%</div>
-      
-      <!-- Optional loading messages for debugging/status updates -->
       <div id="loading-msg" class="loading-msg"></div>
     </section>
 
-    <!-- Main content area where email templates will be displayed -->
-    <!-- Initially empty, populated by JavaScript when data loads -->
     <section id="list" class="grid"></section>
 
-    <!-- Footer with information about data source -->
     <footer class="footer">
       <small>Local test · Data fetched from a public API + local fallback templates</small>
     </footer>
   </main>
-
-  <!-- External JavaScript files -->
-  <!-- templates.js: Contains template data and definitions -->
-  <script src="templates.js"></script>
-  
-  <!-- script.js: Main application logic for loading, filtering, and displaying templates -->
+<script src="templates.js"></script>
   <script src="script.js"></script>
-  
-  <!-- Dynamically generated favicon using Canvas API -->
-  <!-- This creates a simple document emoji as the favicon -->
   <script>
-    // Create canvas element for favicon generation
-    const favicon = document.createElement("canvas");
-    favicon.width = 64;
-    favicon.height = 64;
+  const favicon = document.createElement("canvas");
+  favicon.width = 64;
+  favicon.height = 64;
 
-    // Get 2D drawing context for the canvas
-    const ctx = favicon.getContext("2d");
-    
-    // Configure font and draw document emoji
-    // Adjust font size and positioning as needed
-    ctx.font = "48px serif";
-    ctx.fillText("🗐", 24, 48);
+  const ctx = favicon.getContext("2d");
+  ctx.font = "48px serif"; // adjust font
+  ctx.fillText("🗐", 24, 48);
 
-    // Create link element for favicon
-    const link = document.createElement("link");
-    link.rel = "icon";
-    link.href = favicon.toDataURL("image/png");
-    
-    // Add favicon to document head
-    document.head.appendChild(link);
-    
-    // Note: If favicon generation fails, the page will still function normally
-    // without any visual indication (fails silently)
-  </script>
+  const link = document.createElement("link");
+  link.rel = "icon";
+  link.href = favicon.toDataURL("image/png");
+  document.head.appendChild(link);</script>
 </body>
 </html>
+
+
