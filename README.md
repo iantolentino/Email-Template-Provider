@@ -4,7 +4,7 @@ A lightweight web app to **browse, search, and copy professional email templates
 Designed for support teams and general company use. 
  
 ---
-
+ 
 ## Features
 - **Preloaded Templates**  
   Includes IT support, HR, Finance, Admin, Operations, Security, and more categories.
