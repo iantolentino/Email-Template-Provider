@@ -9,7 +9,7 @@ Designed for support teams and general company use.
 - **Preloaded Templates**  
   Includes IT support, HR, Finance, Admin, Operations, Security, and more categories.
   On going: Adding more category for other industry
-
+ 
 - **Category & Search Filters**   
   Quickly find templates by subject, keywords, or category. 
 
