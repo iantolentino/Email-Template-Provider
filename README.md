@@ -14,7 +14,7 @@ Designed for support teams and general company use.
   Quickly find templates by subject, keywords, or category. 
 
 - **Language Support**  
-  Switch between English and Japanese (multilingual-ready).
+  Switch between English and Japanese (multilingual-ready). 
 
 - **Copy-Friendly UI**  
   Templates are displayed in clean, ready-to-copy format.
