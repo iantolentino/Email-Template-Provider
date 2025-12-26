@@ -1,7 +1,7 @@
 const EMAIL_CONSTANTS = { 
   // Basic salutations
   SHORT_SALUTATION: 'Dear [Name],\n\n',
-  TEAM_SALUTATION: 'Dear Team,\n\n',
+  TEAM_SALUTATION: 'Dear Team,\n\n', 
   DEPARTMENT_SALUTATION: 'Dear [Department] Team,\n\n',
   ALL_STAFF_SALUTATION: 'Dear All,\n\n',
   EMERGENCY_SALUTATION: 'URGENT NOTIFICATION\n\n',
@@ -5208,6 +5208,7 @@ ${EMAIL_CONSTANTS.DEPARTMENT_SIGNATURE}`
   }
  
 ];
+
 
 
 
