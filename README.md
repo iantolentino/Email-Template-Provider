@@ -6,7 +6,7 @@ Designed for support teams and general company use.
 ---
  
 ## Features 
-- **Preloaded Templates**  
+- **Preloaded Templates**   
   Includes IT support, HR, Finance, Admin, Operations, Security, and more categories.
   On going: Adding more category for other industry
  
